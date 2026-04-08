@@ -62,21 +62,14 @@ export default function Collection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 20 }}
+          style={{ marginBottom: 20, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
+          <span className="section-watermark">COLLECTION</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+          <div className="eyebrow-pill">
+            <span className="eyebrow-pill-dot" />
             PRODUIT ACTUEL
-          </p>
+          </div>
           <h2
             style={{
               fontFamily: "var(--font-bebas-neue)",
@@ -99,6 +92,7 @@ export default function Collection() {
           >
             Chaque pièce raconte une histoire culturelle africaine, le jour, comme la nuit.
           </p>
+          </div>
         </motion.div>
 
         <div

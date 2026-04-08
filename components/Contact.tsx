@@ -160,33 +160,11 @@ export default function Contact() {
 
           <a
             href="mailto:mikegtnm15@gmail.com"
-            style={{
-              display: "inline-flex",
-              alignItems: "center",
-              gap: 10,
-              backgroundColor: "#ADFF2F",
-              color: "#0A0A0A",
-              padding: "14px 32px",
-              fontSize: 13,
-              fontWeight: 700,
-              letterSpacing: 2,
-              textTransform: "uppercase",
-              textDecoration: "none",
-              fontFamily: "var(--font-dm-sans)",
-              borderRadius: 2,
-              transition: "all 0.2s",
-            }}
-            onMouseEnter={(e) => {
-              const el = e.currentTarget;
-              el.style.backgroundColor = "#7AB800";
-            }}
-            onMouseLeave={(e) => {
-              const el = e.currentTarget;
-              el.style.backgroundColor = "#ADFF2F";
-            }}
+            className="btn-pill-primary"
+            style={{ fontSize: 13 }}
           >
             Envoyer un message
-            <PaperAirplaneIcon style={{ width: 18, height: 18 }} />
+            <PaperAirplaneIcon style={{ width: 16, height: 16 }} />
           </a>
         </motion.div>
       </div>

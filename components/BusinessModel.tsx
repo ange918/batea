@@ -61,31 +61,25 @@ export default function BusinessModel() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64 }}
+          style={{ marginBottom: 64, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            MODÈLE ÉCONOMIQUE
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(36px, 5vw, 64px)",
-              color: "#ffffff",
-              lineHeight: 1.1,
-            }}
-          >
-            Comment NightGlow génère ses revenus.
-          </h2>
+          <span className="section-watermark">MODÈLE</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill" style={{ backgroundColor: "rgba(0,229,255,0.07)", borderColor: "rgba(0,229,255,0.2)", color: "#00E5FF" }}>
+              <span className="eyebrow-pill-dot" style={{ backgroundColor: "#00E5FF", boxShadow: "0 0 6px rgba(0,229,255,0.8)" }} />
+              MODÈLE ÉCONOMIQUE
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                fontSize: "clamp(36px, 5vw, 64px)",
+                color: "#ffffff",
+                lineHeight: 1.1,
+              }}
+            >
+              Comment NightGlow génère ses revenus.
+            </h2>
+          </div>
         </motion.div>
 
         <div

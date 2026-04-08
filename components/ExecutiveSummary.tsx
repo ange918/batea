@@ -72,31 +72,25 @@ export default function ExecutiveSummary() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64 }}
+          style={{ marginBottom: 64, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            RÉSUMÉ EXÉCUTIF
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(40px, 6vw, 72px)",
-              color: "#ffffff",
-              lineHeight: 1,
-            }}
-          >
-            NightGlow en un coup d&apos;œil
-          </h2>
+          <span className="section-watermark">RÉSUMÉ</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill">
+              <span className="eyebrow-pill-dot" />
+              RÉSUMÉ EXÉCUTIF
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                fontSize: "clamp(40px, 6vw, 72px)",
+                color: "#ffffff",
+                lineHeight: 1,
+              }}
+            >
+              NightGlow en un coup d&apos;œil
+            </h2>
+          </div>
         </motion.div>
 
         <div

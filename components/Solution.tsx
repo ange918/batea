@@ -48,38 +48,20 @@ export default function Solution() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60 }}
+          style={{ marginBottom: 60, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            LA SOLUTION
-          </p>
-          <div style={{ display: "flex", gap: 20, alignItems: "flex-start" }}>
-            <div
-              style={{
-                width: 4,
-                backgroundColor: "#ADFF2F",
-                alignSelf: "stretch",
-                minHeight: 60,
-                flexShrink: 0,
-                boxShadow: "0 0 12px rgba(173,255,47,0.5)",
-              }}
-            />
+          <span className="section-watermark">SOLUTION</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill">
+              <span className="eyebrow-pill-dot" />
+              LA SOLUTION
+            </div>
             <h2
               style={{
                 fontFamily: "var(--font-bebas-neue)",
                 fontSize: "clamp(36px, 5vw, 64px)",
                 color: "#ffffff",
-                lineHeight: 1.1,
+                lineHeight: 1.05,
               }}
             >
               Le phosphorescent comme langage universel.

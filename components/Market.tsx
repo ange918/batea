@@ -110,31 +110,25 @@ export default function Market() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60 }}
+          style={{ marginBottom: 60, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            ÉTUDE DE MARCHÉ
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(36px, 5vw, 64px)",
-              color: "#ffffff",
-              lineHeight: 1.1,
-            }}
-          >
-            Un marché en pleine accélération.
-          </h2>
+          <span className="section-watermark">MARCHÉ</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill">
+              <span className="eyebrow-pill-dot" />
+              ÉTUDE DE MARCHÉ
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                fontSize: "clamp(36px, 5vw, 64px)",
+                color: "#ffffff",
+                lineHeight: 1.1,
+              }}
+            >
+              Un marché en pleine accélération.
+            </h2>
+          </div>
         </motion.div>
 
         <div

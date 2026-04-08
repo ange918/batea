@@ -38,31 +38,25 @@ export default function Sectors() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64 }}
+          style={{ marginBottom: 64, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#ADFF2F",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            NOTRE PÉRIMÈTRE D&apos;ACTION
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(36px, 5vw, 64px)",
-              color: "#ffffff",
+          <span className="section-watermark">SECTEURS</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill">
+              <span className="eyebrow-pill-dot" />
+              NOTRE PÉRIMÈTRE D&apos;ACTION
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                fontSize: "clamp(36px, 5vw, 64px)",
+                color: "#ffffff",
               lineHeight: 1.1,
             }}
           >
             7 Secteurs. Une Technologie. Une Vision.
-          </h2>
+            </h2>
+          </div>
         </motion.div>
 
         <div

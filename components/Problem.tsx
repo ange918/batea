@@ -51,31 +51,25 @@ export default function Problem() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64 }}
+          style={{ marginBottom: 64, position: "relative" }}
         >
-          <p
-            style={{
-              color: "#FF4444",
-              fontSize: 11,
-              letterSpacing: 6,
-              textTransform: "uppercase",
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 12,
-              fontWeight: 600,
-            }}
-          >
-            LE PROBLÈME
-          </p>
-          <h2
-            style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(36px, 5vw, 64px)",
-              color: "#ffffff",
-              lineHeight: 1.1,
-            }}
-          >
-            La nuit africaine est belle — mais invisible.
-          </h2>
+          <span className="section-watermark" style={{ WebkitTextStroke: "1px rgba(255,68,68,0.06)" }}>PROBLÈME</span>
+          <div style={{ position: "relative", zIndex: 1 }}>
+            <div className="eyebrow-pill" style={{ backgroundColor: "rgba(255,68,68,0.07)", borderColor: "rgba(255,68,68,0.2)", color: "#FF4444" }}>
+              <span className="eyebrow-pill-dot" style={{ backgroundColor: "#FF4444", boxShadow: "0 0 6px rgba(255,68,68,0.8)" }} />
+              LE PROBLÈME
+            </div>
+            <h2
+              style={{
+                fontFamily: "var(--font-bebas-neue)",
+                fontSize: "clamp(36px, 5vw, 64px)",
+                color: "#ffffff",
+                lineHeight: 1.1,
+              }}
+            >
+              La nuit africaine est belle — mais invisible.
+            </h2>
+          </div>
         </motion.div>
 
         <div

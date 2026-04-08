@@ -113,30 +113,8 @@ export default function Navbar() {
             ))}
             <a
               href="#contact"
-              style={{
-                border: "1px solid #ADFF2F",
-                color: "#ADFF2F",
-                padding: "8px 18px",
-                fontSize: 12,
-                fontWeight: 600,
-                letterSpacing: 2,
-                textTransform: "uppercase",
-                textDecoration: "none",
-                fontFamily: "var(--font-dm-sans)",
-                borderRadius: 6,
-                transition: "all 0.2s",
-                whiteSpace: "nowrap",
-              }}
-              onMouseEnter={(e) => {
-                const el = e.target as HTMLElement;
-                el.style.backgroundColor = "#ADFF2F";
-                el.style.color = "#0A0A0A";
-              }}
-              onMouseLeave={(e) => {
-                const el = e.target as HTMLElement;
-                el.style.backgroundColor = "transparent";
-                el.style.color = "#ADFF2F";
-              }}
+              className="btn-pill-glow"
+              style={{ padding: "8px 20px", fontSize: 11 }}
             >
               Nous contacter
             </a>
