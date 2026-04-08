@@ -1,6 +1,5 @@
 "use client";
 import { motion } from "framer-motion";
-import { UserCircleIcon } from "@heroicons/react/24/outline";
 
 const members = [
   {
@@ -34,7 +33,7 @@ const members = [
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -51,7 +50,7 @@ export default function Team() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60 }}
+          style={{ marginBottom: 64 }}
         >
           <p
             style={{
@@ -82,54 +81,78 @@ export default function Team() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: 24,
+            gap: 20,
           }}
         >
           {members.map((m, i) => (
             <motion.div
               key={m.name}
-              className="shadow-glow-hover"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               variants={fadeUp}
+              whileHover={{ y: -6, boxShadow: `0 20px 50px ${m.color}20` }}
               style={{
-                backgroundColor: "#1A1A1A",
-                borderRadius: 4,
-                padding: 32,
-                borderTop: `4px solid ${m.color}`,
+                background: `linear-gradient(160deg, #161616 0%, #1e1e1e 100%)`,
+                borderRadius: 20,
+                padding: "36px 24px 28px",
+                border: `1px solid ${m.color}20`,
                 textAlign: "center",
+                position: "relative",
+                overflow: "hidden",
               }}
             >
+              {/* Radial glow bg behind avatar */}
               <div
                 style={{
-                  width: 80,
-                  height: 80,
+                  position: "absolute",
+                  top: 0,
+                  left: "50%",
+                  transform: "translateX(-50%)",
+                  width: 140,
+                  height: 100,
+                  background: `radial-gradient(ellipse, ${m.color}15 0%, transparent 70%)`,
+                  pointerEvents: "none",
+                }}
+              />
+
+              {/* Avatar */}
+              <div
+                style={{
+                  width: 90,
+                  height: 90,
                   borderRadius: "50%",
-                  border: `2px solid ${m.color}`,
+                  background: `radial-gradient(circle at 30% 30%, ${m.color}25, ${m.color}08)`,
+                  border: `2px solid ${m.color}50`,
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   margin: "0 auto 20px",
-                  backgroundColor: `${m.color}15`,
                   position: "relative",
+                  boxShadow: `0 0 30px ${m.color}20`,
                 }}
               >
-                {m.initials ? (
-                  <span
-                    style={{
-                      fontFamily: "var(--font-bebas-neue)",
-                      fontSize: 24,
-                      color: m.color,
-                      letterSpacing: 2,
-                    }}
-                  >
-                    {m.initials}
-                  </span>
-                ) : (
-                  <UserCircleIcon style={{ width: 40, height: 40, color: m.color }} />
-                )}
+                <span
+                  style={{
+                    fontFamily: "var(--font-bebas-neue)",
+                    fontSize: 26,
+                    color: m.color,
+                    letterSpacing: 3,
+                  }}
+                >
+                  {m.initials}
+                </span>
+
+                {/* Ring */}
+                <div
+                  style={{
+                    position: "absolute",
+                    inset: -6,
+                    borderRadius: "50%",
+                    border: `1px solid ${m.color}20`,
+                  }}
+                />
               </div>
 
               <h3
@@ -145,28 +168,39 @@ export default function Team() {
                 {m.name}
               </h3>
 
-              <p
+              <div
                 style={{
-                  color: m.color,
-                  fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
-                  fontWeight: 600,
-                  letterSpacing: 2,
-                  textTransform: "uppercase",
+                  display: "inline-block",
+                  backgroundColor: `${m.color}12`,
+                  border: `1px solid ${m.color}30`,
+                  borderRadius: 20,
+                  padding: "4px 14px",
                   marginBottom: m.desc ? 16 : 0,
                 }}
               >
-                {m.role}
-              </p>
+                <p
+                  style={{
+                    color: m.color,
+                    fontSize: 11,
+                    fontFamily: "var(--font-dm-sans)",
+                    fontWeight: 600,
+                    letterSpacing: 1.5,
+                    textTransform: "uppercase",
+                  }}
+                >
+                  {m.role}
+                </p>
+              </div>
 
               {m.desc && (
                 <p
                   style={{
-                    color: "rgba(255,255,255,0.5)",
+                    color: "rgba(255,255,255,0.45)",
                     fontSize: 13,
                     fontFamily: "var(--font-dm-sans)",
-                    lineHeight: 1.6,
+                    lineHeight: 1.7,
                     fontStyle: "italic",
+                    marginTop: 4,
                   }}
                 >
                   {m.desc}

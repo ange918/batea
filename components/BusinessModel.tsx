@@ -15,6 +15,7 @@ const cards = [
     icon: ShoppingCartIcon,
     price: "15K–80K FCFA",
     desc: "Collections vêtements & accessoires. Vente en ligne, pop-up stores, événements. Marges élevées sur éditions limitées.",
+    color: "#ADFF2F",
   },
   {
     num: "02",
@@ -22,6 +23,7 @@ const cards = [
     icon: BuildingStorefrontIcon,
     price: "100K–2M FCFA",
     desc: "Créations sur mesure pour entreprises, hôtels, événements, campagnes marketing, institutions.",
+    color: "#00E5FF",
   },
   {
     num: "03",
@@ -29,6 +31,7 @@ const cards = [
     icon: SparklesIcon,
     price: "Kit à partir de 10K FCFA",
     desc: "Poudres et gels phosphorescents pour MUA, salons, événements. Fort volume, marge préservée.",
+    color: "#FF6FA8",
   },
   {
     num: "04",
@@ -36,11 +39,12 @@ const cards = [
     icon: DocumentTextIcon,
     price: "200K–1M FCFA",
     desc: "Partenariats artistes, marques, organisateurs. Licences de design, éditions co-brandées.",
+    color: "#B388FF",
   },
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -57,7 +61,7 @@ export default function BusinessModel() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60 }}
+          style={{ marginBottom: 64 }}
         >
           <p
             style={{
@@ -88,84 +92,113 @@ export default function BusinessModel() {
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 24,
-            marginBottom: 32,
+            gap: 20,
+            marginBottom: 28,
           }}
         >
           {cards.map((card, i) => (
             <motion.div
               key={card.num}
-              className="shadow-glow-hover"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
               variants={fadeUp}
+              whileHover={{ y: -6, boxShadow: `0 20px 50px ${card.color}20` }}
               style={{
-                backgroundColor: "#1A1A1A",
-                borderRadius: 4,
-                padding: 32,
+                background: `linear-gradient(145deg, #161616 0%, #1c1c1c 100%)`,
+                borderRadius: 16,
+                padding: "32px 28px",
+                border: `1px solid ${card.color}20`,
                 position: "relative",
+                overflow: "hidden",
               }}
             >
+              {/* Ghost number */}
               <span
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 64,
-                  color: "rgba(173,255,47,0.08)",
                   position: "absolute",
-                  top: 16,
-                  right: 20,
+                  top: 12,
+                  right: 18,
+                  fontFamily: "var(--font-bebas-neue)",
+                  fontSize: 80,
+                  color: `${card.color}08`,
                   lineHeight: 1,
                   userSelect: "none",
                 }}
               >
                 {card.num}
               </span>
-              <card.icon
+
+              {/* Icon with pill */}
+              <div
                 style={{
-                  width: 32,
-                  height: 32,
-                  color: "#ADFF2F",
-                  marginBottom: 16,
-                }}
-              />
-              <h3
-                style={{
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 26,
-                  color: "#ffffff",
-                  marginBottom: 8,
-                  letterSpacing: 1,
+                  display: "inline-flex",
+                  alignItems: "center",
+                  gap: 10,
+                  backgroundColor: `${card.color}12`,
+                  border: `1px solid ${card.color}25`,
+                  borderRadius: 40,
+                  padding: "8px 16px 8px 10px",
+                  marginBottom: 24,
                 }}
               >
-                {card.title}
-              </h3>
+                <card.icon style={{ width: 20, height: 20, color: card.color }} />
+                <span
+                  style={{
+                    color: card.color,
+                    fontSize: 11,
+                    fontWeight: 700,
+                    letterSpacing: 2,
+                    textTransform: "uppercase",
+                    fontFamily: "var(--font-dm-sans)",
+                  }}
+                >
+                  {card.title}
+                </span>
+              </div>
+
+              {/* Price badge */}
               <p
                 style={{
                   fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 22,
-                  color: "#ADFF2F",
-                  marginBottom: 16,
+                  fontSize: 28,
+                  color: "#ffffff",
                   letterSpacing: 1,
+                  marginBottom: 12,
+                  lineHeight: 1.1,
                 }}
               >
                 {card.price}
               </p>
+
               <p
                 style={{
-                  color: "rgba(255,255,255,0.55)",
-                  fontSize: 14,
+                  color: "rgba(255,255,255,0.5)",
+                  fontSize: 13,
                   fontFamily: "var(--font-dm-sans)",
-                  lineHeight: 1.6,
+                  lineHeight: 1.7,
                 }}
               >
                 {card.desc}
               </p>
+
+              {/* Bottom glow line */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: 2,
+                  background: `linear-gradient(90deg, transparent, ${card.color}60, transparent)`,
+                }}
+              />
             </motion.div>
           ))}
         </div>
 
+        {/* Prévisionnel banner */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -173,32 +206,46 @@ export default function BusinessModel() {
           transition={{ duration: 0.6 }}
           variants={fadeUp}
           style={{
-            backgroundColor: "#1A1A1A",
-            borderRadius: 4,
-            padding: "24px 32px",
-            border: "1px solid rgba(201,168,76,0.4)",
+            background: "linear-gradient(135deg, #1a1a0f 0%, #1a1610 100%)",
+            borderRadius: 16,
+            padding: "28px 32px",
+            border: "1px solid rgba(201,168,76,0.3)",
             display: "flex",
             alignItems: "center",
             gap: 20,
             flexWrap: "wrap",
           }}
         >
-          <CalculatorIcon style={{ width: 28, height: 28, color: "#C9A84C", flexShrink: 0 }} />
+          <div
+            style={{
+              width: 48,
+              height: 48,
+              borderRadius: 12,
+              backgroundColor: "rgba(201,168,76,0.12)",
+              border: "1px solid rgba(201,168,76,0.3)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              flexShrink: 0,
+            }}
+          >
+            <CalculatorIcon style={{ width: 24, height: 24, color: "#C9A84C" }} />
+          </div>
           <div
             style={{
               fontFamily: "var(--font-dm-sans)",
               fontSize: 14,
               color: "rgba(255,255,255,0.7)",
-              lineHeight: 1.8,
+              lineHeight: 2,
               flex: 1,
             }}
           >
-            <span style={{ color: "#C9A84C", fontWeight: 700 }}>PRÉVISIONNEL AN 1 :</span>{" "}
+            <span style={{ color: "#C9A84C", fontWeight: 700, letterSpacing: 1 }}>PRÉVISIONNEL AN 1 ·</span>{" "}
             CA →{" "}
-            <span style={{ color: "#ADFF2F", fontWeight: 600 }}>13 150 000 FCFA</span>
-            {" · "}Charges →{" "}
+            <span style={{ color: "#ADFF2F", fontWeight: 700 }}>13 150 000 FCFA</span>
+            {"  ·  "}Charges →{" "}
             <span style={{ color: "#FF6FA8", fontWeight: 600 }}>4 560 900 FCFA</span>
-            {" · "}Bénéfice estimé →{" "}
+            {"  ·  "}Bénéfice →{" "}
             <span style={{ color: "#ADFF2F", fontWeight: 700, fontSize: 16 }}>8 589 100 FCFA</span>
           </div>
         </motion.div>

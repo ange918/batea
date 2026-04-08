@@ -15,41 +15,47 @@ const cards = [
     color: "#ADFF2F",
     icon: LightBulbIcon,
     desc: "Produits qui brillent dans le noir sans électricité, sans pile, sans artifice.",
+    num: "01",
   },
   {
     label: "ORIGINE",
     color: "#C9A84C",
     icon: GlobeAltIcon,
     desc: "Fondé à Cotonou, Bénin, 2025 — équipe pluridisciplinaire béninoise.",
+    num: "02",
   },
   {
     label: "SECTEURS",
     color: "#00E5FF",
     icon: Squares2X2Icon,
     desc: "7 secteurs actifs : Mode, Déco, Sécurité, Tourisme, Architecture, Événementiel, Cosmétique.",
+    num: "03",
   },
   {
     label: "MARCHÉ",
     color: "#B388FF",
     icon: ChartBarIcon,
     desc: "Croissance 8–10%/an · Streetwear mondial 347 Mds$ · Phosphorescent 285 M$.",
+    num: "04",
   },
   {
     label: "MODÈLE",
     color: "#00E5FF",
     icon: CurrencyDollarIcon,
     desc: "Vente directe + B2B + Licences · Bénéfice an 1 estimé : 8,5 M FCFA.",
+    num: "05",
   },
   {
     label: "VISION",
     color: "#FF6FA8",
     icon: RocketLaunchIcon,
     desc: "Référence africaine dans 17 pays OAPI + diaspora mondiale.",
+    num: "06",
   },
 ];
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 30 },
+  hidden: { opacity: 0, y: 40 },
   visible: { opacity: 1, y: 0 },
 };
 
@@ -66,7 +72,7 @@ export default function ExecutiveSummary() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60 }}
+          style={{ marginBottom: 64 }}
         >
           <p
             style={{
@@ -76,6 +82,7 @@ export default function ExecutiveSummary() {
               textTransform: "uppercase",
               fontFamily: "var(--font-dm-sans)",
               marginBottom: 12,
+              fontWeight: 600,
             }}
           >
             RÉSUMÉ EXÉCUTIF
@@ -95,51 +102,86 @@ export default function ExecutiveSummary() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
-            gap: 24,
+            gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
+            gap: 20,
           }}
         >
           {cards.map((card, i) => (
             <motion.div
               key={card.label}
-              className="shadow-glow-hover"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
+              viewport={{ once: true, amount: 0.15 }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
               variants={fadeUp}
               style={{
-                backgroundColor: "#1A1A1A",
-                borderRadius: 4,
-                padding: 28,
-                borderTop: `4px solid ${card.color}`,
                 position: "relative",
+                background: "linear-gradient(135deg, #161616 0%, #1e1e1e 100%)",
+                borderRadius: 16,
+                padding: "28px 28px 24px",
+                border: "1px solid rgba(255,255,255,0.06)",
+                overflow: "hidden",
+                cursor: "default",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease",
+              }}
+              whileHover={{
+                y: -6,
+                boxShadow: `0 20px 50px ${card.color}22`,
+                borderColor: `${card.color}44`,
               }}
             >
-              <card.icon
+              {/* Corner number */}
+              <span
                 style={{
-                  width: 32,
-                  height: 32,
-                  color: card.color,
-                  marginBottom: 16,
+                  position: "absolute",
+                  top: 16,
+                  right: 20,
+                  fontFamily: "var(--font-bebas-neue)",
+                  fontSize: 52,
+                  color: `${card.color}10`,
+                  lineHeight: 1,
+                  userSelect: "none",
                 }}
-              />
+              >
+                {card.num}
+              </span>
+
+              {/* Icon container */}
+              <div
+                style={{
+                  width: 52,
+                  height: 52,
+                  borderRadius: 12,
+                  backgroundColor: `${card.color}15`,
+                  border: `1px solid ${card.color}30`,
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  marginBottom: 20,
+                }}
+              >
+                <card.icon style={{ width: 26, height: 26, color: card.color }} />
+              </div>
+
+              {/* Label */}
               <p
                 style={{
-                  color: "#ADFF2F",
+                  color: card.color,
                   fontSize: 11,
                   letterSpacing: 4,
                   textTransform: "uppercase",
                   fontFamily: "var(--font-dm-sans)",
-                  marginBottom: 10,
-                  fontWeight: 600,
+                  marginBottom: 8,
+                  fontWeight: 700,
                 }}
               >
                 {card.label}
               </p>
+
+              {/* Desc */}
               <p
                 style={{
-                  color: "rgba(255,255,255,0.65)",
+                  color: "rgba(255,255,255,0.55)",
                   fontSize: 14,
                   fontFamily: "var(--font-dm-sans)",
                   lineHeight: 1.7,
@@ -147,6 +189,18 @@ export default function ExecutiveSummary() {
               >
                 {card.desc}
               </p>
+
+              {/* Bottom accent line */}
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: 0,
+                  left: 0,
+                  right: 0,
+                  height: 2,
+                  background: `linear-gradient(90deg, ${card.color}80, transparent)`,
+                }}
+              />
             </motion.div>
           ))}
         </div>
