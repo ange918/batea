@@ -1,0 +1,304 @@
+# 🟢 PROMPT REPLIT AGENT — NIGHTGLOW (NEXT.JS + HEROICONS)
+
+---
+
+## CONTEXTE DU PROJET
+
+Crée un site web complet et immersif pour **NightGlow**, une marque africaine de design phosphorescent fondée à Cotonou, Bénin, en 2025 par GBETOENONMON Sèdami Mike. NightGlow crée des vêtements, accessoires et objets décoratifs qui brillent dans le noir grâce aux matériaux phosphorescents (strontium aluminate), sans électricité, sans pile, sans artifice.
+
+**Slogan** : *"L'Afrique brille. Même dans le noir."*
+**Tagline produit** : *"Let There be Light"*
+
+Le site doit être sombre, luxueux, africain et visuellement saisissant. Fond noir total, accents vert fluo, typographie ultra-bold, effets de lueur phosphorescente.
+
+---
+
+## STACK TECHNIQUE
+
+- **Next.js 14** avec App Router
+- **TypeScript**
+- **Tailwind CSS**
+- **@heroicons/react v2** pour toutes les icônes — aucune autre librairie d'icônes
+- **Framer Motion** pour toutes les animations
+- **next/font** pour charger : `Bebas Neue` (titres) + `DM Sans` (corps de texte)
+
+---
+
+## PALETTE DE COULEURS
+
+À configurer dans `tailwind.config.ts` comme couleurs custom :
+
+- Fond principal : `#0A0A0A`
+- Fond carte : `#1A1A1A` et `#222222`
+- **Vert fluo** (couleur signature NightGlow) : `#ADFF2F`
+- Vert dim : `#7AB800`
+- Or : `#C9A84C`
+- Cyan : `#00E5FF`
+- Rose : `#FF6FA8`
+- Violet : `#B388FF`
+- Bordures subtiles : `rgba(255,255,255,0.08)`
+- Bordures vertes : `rgba(173,255,47,0.3)`
+
+---
+
+## TYPOGRAPHIE
+
+- **Bebas Neue** → tous les `<h1>`, `<h2>`, grandes métriques chiffrées, numéros de section
+- **DM Sans** → paragraphes, descriptions, labels, boutons, navigation
+- Surtitles de section : très petite taille, lettres très espacées (`tracking-widest`), vert fluo, uppercase
+
+---
+
+## EFFETS VISUELS GLOBAUX
+
+- **Glow phosphorescent** : `text-shadow` vert sur les titres importants et chiffres clés
+- **Lueur sur les cartes** : `box-shadow` halo vert subtil, visible au hover
+- **Barre verticale verte** de 4px sur le bord gauche du hero
+- **Particules flottantes** dans le hero : petits points verts qui montent/descendent avec Framer Motion
+- **Animations au scroll** : chaque section fait un `fadeInUp` (opacity 0→1, translateY 30→0) via Framer Motion `whileInView`
+- **Compteurs animés** : les stats chiffrées s'incrémentent de 0 à leur valeur dès qu'elles entrent dans le viewport
+- **Scrollbar custom** : 4px de large, verte
+- **Curseur custom** : petit point vert lumineux sur desktop
+- **Smooth scroll** sur toute la page
+
+---
+
+## NAVBAR (fixe, en haut)
+
+- Fond transparent → `#0A0A0A/95` + `backdrop-blur` au scroll
+- Bordure inférieure verte subtile qui apparaît au scroll
+- Logo à gauche : icône `SparklesIcon` heroicons + texte `NIGHTGLOW` en Bebas Neue vert fluo
+- Liens à droite : `Accueil · Collection · Marché · Modèle · Équipe · Contact` — blancs, uppercase, hover vert
+- Bouton CTA : `Nous contacter` — bordure verte, hover = fond vert + texte noir
+- Mobile : icône `Bars3Icon` / `XMarkIcon` (heroicons), menu déroulant sur fond noir
+
+---
+
+## SECTION 1 — HERO
+
+- Plein écran 100vh, fond noir, barre verte verticale 4px à l'extrême gauche
+- Surtitle : `PITCH DECK · 2025–2026` — petit, vert fluo, très espacé
+- Titre géant 2 lignes : `NIGHT` en blanc + `GLOW` en vert fluo avec glow pulsant en boucle infinie
+- Taille : 120px desktop / 72px mobile — police Bebas Neue
+- Sous-titre italique : *L'Afrique brille. Même dans le noir.*
+- Description : `Marque africaine de design phosphorescent · Mode, Art, Événements, Décoration & Innovation`
+- Séparateur horizontal fin blanc
+- Infos fondateur avec icônes heroicons :
+  - `PhoneIcon` → +229 01 52 51 45 53
+  - `EnvelopeIcon` → mikegtnm15@gmail.com
+  - `MapPinIcon` → Cotonou, République du Bénin
+- Bouton CTA : `Découvrir la collection` + `ArrowRightIcon` heroicons — bordure verte, hover fond vert + texte noir
+- Côté droit desktop : SVG d'un temple/case africaine dessiné en trait vert fluo avec halo lumineux
+- Particules vertes animées (Framer Motion) en arrière-plan
+
+---
+
+## SECTION 2 — RÉSUMÉ EXÉCUTIF
+
+- Surtitle : `RÉSUMÉ EXÉCUTIF`
+- Titre : `NightGlow en un coup d'œil`
+- Grille 3 colonnes desktop / 1 colonne mobile, 6 cartes
+- Chaque carte : barre colorée en haut (4px), fond `#1A1A1A`, icône heroicons, titre uppercase vert, description
+
+| Carte | Couleur barre | Icône heroicons | Contenu |
+|-------|--------------|-----------------|---------|
+| CONCEPT | Vert | `LightBulbIcon` | Produits qui brillent dans le noir sans électricité |
+| ORIGINE | Or | `GlobeAltIcon` | Fondé à Cotonou, Bénin, 2025 — équipe pluridisciplinaire |
+| SECTEURS | Cyan | `Squares2X2Icon` | 7 secteurs actifs : Mode, Déco, Sécurité, Tourisme, Architecture, Événementiel, Cosmétique |
+| MARCHÉ | Violet | `ChartBarIcon` | Croissance 8–10%/an · Streetwear mondial 347 Mds$ · Phosphorescent 285 M$ |
+| MODÈLE | Cyan | `CurrencyDollarIcon` | Vente directe + B2B + Licences · Bénéfice an 1 estimé : 8,5 M FCFA |
+| VISION | Rose | `RocketLaunchIcon` | Référence africaine dans 17 pays OAPI + diaspora mondiale |
+
+---
+
+## SECTION 3 — LE PROBLÈME
+
+- Surtitle : `LE PROBLÈME` — rouge/orange
+- Titre : `La nuit africaine est belle — mais invisible.`
+- 3 colonnes, barre rouge en haut de chaque carte
+
+**Rues sombres** · `ExclamationTriangleIcon`
+Cotonou et les grandes villes africaines manquent d'éclairage nocturne. Des milliers de motos, piétons et cyclistes circulent chaque nuit sans visibilité.
+Stat : `1 accident/nuit` (Bebas Neue, or) · *lié au manque de visibilité (estimé)*
+
+**Mode sans âme** · `FaceFrownIcon`
+Le streetwear africain souffre d'une saturation visuelle. Les créations sont souvent imitées, peu différenciantes, sans innovation esthétique réelle.
+Stat : `0 marque` · *phosphorescente africaine identifiée*
+
+**Valeur non capturée** · `BanknotesIcon`
+L'Afrique exporte son talent culturel, ses motifs, ses symboles, son histoire ; sans en capturer la valeur économique à travers des marques premium.
+Stat : `~10 milliards $` · *de valeur mode africaine non exploitée*
+
+---
+
+## SECTION 4 — LA SOLUTION
+
+- Surtitle : `LA SOLUTION`
+- Titre : `Le phosphorescent comme langage universel.` — barre verte verticale à gauche
+- Layout 50/50 desktop : texte gauche, SVG vase africain phosphorescent rouge/orangé avec halo lumineux à droite
+- Intro : NightGlow transforme des matériaux phosphorescents en créations culturelles, artistiques et commerciales. Nos produits absorbent la lumière le jour et la restituent la nuit sans électricité, sans pile, sans artifice.
+- 4 blocs icône heroicons + titre vert + description :
+  - `BeakerIcon` → **TECHNOLOGIE** : Encres, vinyles et poudres phosphorescentes à longue persistance (strontium aluminate)
+  - `PaintBrushIcon` → **CULTURE** : Chaque motif tire de l'iconographie béninoise : poteries, architecture, symboles spirituels
+  - `BoltSlashIcon` → **IMPACT** : Une solution passive, sans énergie, adaptée au contexte africain
+  - `SunIcon` → **INNOVATION** : Double vie du produit : élégant le jour, spectaculaire la nuit
+
+---
+
+## SECTION 5 — COLLECTION
+
+- Surtitle : `PRODUIT ACTUEL`
+- Titre : `Collection Let There be Light — Saison N°1`
+- Sous-titre italique : *Chaque pièce raconte une histoire culturelle africaine, le jour, comme la nuit.*
+
+**Toggle interactif JOUR / NUIT** géré par état React :
+- Bouton `SunIcon` heroicons pour JOUR / `MoonIcon` pour NUIT
+- Mode JOUR : cartes produits fond gris foncé, motifs africains visibles normalement
+- Mode NUIT : fond noir total, motifs "brillent" avec `drop-shadow` et `box-shadow` verts/blancs animés
+
+4 cartes produits en grille 2x2 desktop / 1 colonne mobile :
+- Jaquette denim phosphorescente · `45 000 FCFA`
+- Boxy-Fit Homme & Femme · `35 000 FCFA`
+- Gilet · `28 000 FCFA`
+- Tote Bag · `15 000 FCFA`
+
+Chaque carte : zone SVG avec motif africain, nom Bebas Neue, prix vert fluo, `ShoppingBagIcon` au hover.
+Bouton bas : `Voir toute la collection` + `ArrowRightIcon`
+
+---
+
+## SECTION 6 — MARCHÉ
+
+- Surtitle : `ÉTUDE DE MARCHÉ`
+- Titre : `Un marché en pleine accélération.`
+
+4 cartes métriques en haut avec compteurs animés au scroll :
+- `347 Mds$` · `GlobeAmericasIcon` · bordure verte · Marché mondial streetwear
+- `24 Mds$` · `TrophyIcon` · bordure or · Streetwear Afrique & M-E 2025
+- `285 M$` · `BeakerIcon` · bordure cyan · Marché pigments phosphorescents
+- `+10%/an` · `ArrowTrendingUpIcon` · bordure violet · Croissance mode innovante Afrique
+
+2 blocs texte en dessous :
+
+**MARCHÉ LOCAL — BÉNIN** · `BuildingOffice2Icon` · barre verte
+- Bénin Week Fashion : 7e édition 2025 — scène mode en structuration active
+- Objectif gouvernemental : 2 millions de touristes/an d'ici 2030
+- 1 250 milliards FCFA investis dans les infrastructures touristiques depuis 2016
+- AUCUN concurrent phosphorescent identifié au Bénin ni en Afrique de l'Ouest
+
+**MARCHÉ INTERNATIONAL** · `GlobeAltIcon` · barre or
+- Pigments phospho : 285→397M$ (2024→2032) CAGR 5.7%
+- 63% de la demande : pigments longue persistance (strontium aluminate)
+- 28% des innovations mondiales ciblent mode & déco phosphorescentes
+- Diaspora africaine : +40 millions personnes en Europe & Amérique du Nord
+
+---
+
+## SECTION 7 — MODÈLE ÉCONOMIQUE
+
+- Surtitle : `MODÈLE ÉCONOMIQUE`
+- Titre : `Comment NightGlow génère ses revenus.`
+- 4 cartes en grille 2x2 desktop / 1 colonne mobile
+
+| # | Titre | Icône heroicons | Prix (vert fluo, Bebas Neue) | Description |
+|---|-------|----------------|------------------------------|-------------|
+| 01 | Vente Directe | `ShoppingCartIcon` | 15K–80K FCFA | Collections vêtements & accessoires. Vente en ligne, pop-up stores, événements. Marges élevées sur éditions limitées. |
+| 02 | B2B & Sur Mesure | `BuildingStorefrontIcon` | 100K–2M FCFA | Créations sur mesure pour entreprises, hôtels, événements, campagnes marketing, institutions. |
+| 03 | Cosmétique & Body Art | `SparklesIcon` | Kit à partir de 10K FCFA | Poudres et gels phosphorescents pour MUA, salons, événements. Fort volume, marge préservée. |
+| 04 | Licences & Co-branding | `DocumentTextIcon` | 200K–1M FCFA | Partenariats artistes, marques, organisateurs. Licences de design, éditions co-brandées. |
+
+Barre prévisionnel en bas (fond `#1A1A1A`, bordure or) avec `CalculatorIcon` :
+`PRÉVISIONNEL AN 1 : CA → 13 150 000 FCFA · Charges → 4 560 900 FCFA · Bénéfice estimé → 8 589 100 FCFA`
+
+---
+
+## SECTION 8 — 7 SECTEURS
+
+- Surtitle : `NOTRE PÉRIMÈTRE D'ACTION`
+- Titre : `7 Secteurs. Une Technologie. Une Vision.`
+- Grille 4 colonnes desktop / 2 tablette / 1 mobile
+
+| # | Secteur | Barre | Icône heroicons |
+|---|---------|-------|----------------|
+| 01 | Mode & Design Phosphorescent | Vert | `SwatchIcon` |
+| 02 | Décoration, Art & Galeries | Or | `PaintBrushIcon` |
+| 03 | Sécurité & Visibilité Nocturne | Rouge | `ShieldCheckIcon` |
+| 04 | Tourisme & Hôtellerie | Cyan | `BuildingOfficeIcon` |
+| 05 | Architecture & Design d'Intérieur | Violet | `HomeModernIcon` |
+| 06 | Événementiel & Communication | Rose | `MegaphoneIcon` |
+| 07 | Cosmétique & Body Art Lumineux | Or | `SparklesIcon` |
+
+---
+
+## SECTION 9 — ÉQUIPE
+
+- Surtitle : `L'ÉQUIPE FONDATRICE`
+- Titre : `Des talents béninois au service d'une vision africaine.`
+- 4 cartes en grille, barre colorée en haut, cercle avatar avec initiales, `UserCircleIcon` en fallback
+
+| Membre | Initiales | Couleur barre | Rôle |
+|--------|-----------|--------------|------|
+| GBETOENONMON Sèdami Mike | GSM | Vert | Fondateur & Directeur Général |
+| Arif KARIMOU | AK | Or | Consultant Marketing |
+| Mohamed ASSANI | MA | Cyan | Designer Graphique |
+| Marie-Fushia SOSSOU | MFS | Rose | Styliste |
+
+Description fondateur uniquement : *Visionnaire du projet. Stratégie, business development, direction artistique. Architecte de l'ambition NightGlow.*
+
+---
+
+## SECTION 10 — INVESTISSEMENT
+
+- Surtitle : `APPEL À PARTENARIAT & INVESTISSEMENT`
+- Titre : `Ce dont NightGlow a besoin pour décoller.`
+- 4 blocs empilés, bordure colorée 4px à gauche, icône heroicons, montant en gras à droite
+
+| Bloc | Icône | Bordure | Montant/Type |
+|------|-------|---------|-------------|
+| FINANCEMENT AMORÇAGE | `BanknotesIcon` | Verte | 5 000 000 – 10 000 000 FCFA |
+| PARTENARIAT HÔTELIER & TOURISME | `BuildingOfficeIcon` | Or | Convention de distribution |
+| PARTENARIAT INSTITUTIONNEL | `AcademicCapIcon` | Cyan | Soutien ADAC / Sèmè City |
+| PARTENARIAT COMMERCIAL B2B | `BriefcaseIcon` | Rose | Contrats de fourniture |
+
+Contenu de chaque bloc : texte descriptif complet issu du pitch deck (voir données ci-dessus dans les sections précédentes).
+
+---
+
+## SECTION 11 — CONTACT / CONCLUSION
+
+- Grand titre centré : `L'Afrique brille.` (blanc) + `Même dans le noir.` (vert fluo, glow)
+- Texte italique : *NightGlow n'est pas un projet de mode. C'est un projet de civilisation.*
+- Texte italique : *Celui de montrer que l'Afrique, quand elle crée, éclaire le monde entier.*
+- Carte de contact (fond `#1A1A1A`, bordure verte complète, halo vert) :
+  - `UserIcon` → GBETOENONMON Sèdami Mike · Fondateur (vert fluo, Bebas Neue)
+  - `PhoneIcon` → +229 01 52 51 45 53
+  - `EnvelopeIcon` → mikegtnm15@gmail.com
+  - `AtSymbolIcon` → @night_glow_city
+  - `MapPinIcon` → Cotonou, République du Bénin
+- Bouton : `Envoyer un message` + `PaperAirplaneIcon` heroicons
+
+---
+
+## FOOTER
+
+- Fond `#0A0A0A`, bordure supérieure verte subtile
+- `SparklesIcon` + `NIGHTGLOW` en vert fluo à gauche
+- Tagline : *L'Afrique brille. Même dans le noir.*
+- 3 colonnes : Navigation | Contact | Réseaux sociaux (`@night_glow_city`)
+- `CheckBadgeIcon` + note : `Marque déposée OAPI — 4 classes — 17 pays africains protégés`
+- Copyright : `© 2025 NightGlow. Tous droits réservés. Cotonou, République du Bénin.`
+
+---
+
+## RÈGLES ABSOLUES
+
+1. Toutes les icônes viennent **uniquement** de `@heroicons/react/24/outline` ou `/24/solid`
+2. **Jamais de fond blanc** — le site est entièrement noir
+3. **Bebas Neue** pour tous les titres et grandes métriques sans exception
+4. **Framer Motion `whileInView`** sur chaque section pour l'animation au scroll
+5. Site **100% responsive** — mobile-first, breakpoints Tailwind sm/md/lg/xl
+6. Les compteurs de la section Marché s'animent avec un hook `useCountUp` personnalisé
+7. Le toggle Jour/Nuit de la Collection est géré par `useState` React
+8. Toutes les cartes ont un `hover` avec halo vert (`shadow-glow`)
+9. Smooth scroll sur tous les liens ancres de navigation
+10. Aucune image externe — visuels en SVG pur dessinés en code ou placeholders CSS stylisés
