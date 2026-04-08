@@ -78,15 +78,12 @@ export default function Hero() {
       ))}
 
       <div
+        className="hero-grid"
         style={{
           maxWidth: 1280,
           margin: "0 auto",
           padding: "120px 24px 80px",
           width: "100%",
-          display: "grid",
-          gridTemplateColumns: "1fr auto",
-          gap: 60,
-          alignItems: "center",
           position: "relative",
           zIndex: 1,
         }}
@@ -241,8 +238,7 @@ export default function Hero() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
-          style={{ display: "none" }}
-          className="lg:block"
+          className="hero-svg"
         >
           <svg
             width={320}

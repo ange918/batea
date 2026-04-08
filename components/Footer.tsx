@@ -16,14 +16,7 @@ export default function Footer() {
           margin: "0 auto",
         }}
       >
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "2fr 1fr 1fr 1fr",
-            gap: 40,
-            marginBottom: 48,
-          }}
-        >
+        <div className="footer-grid">
           <div>
             <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 12 }}>
               <SparklesIcon style={{ width: 24, height: 24, color: "#ADFF2F" }} />

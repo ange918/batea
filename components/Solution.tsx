@@ -87,14 +87,7 @@ export default function Solution() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr",
-            gap: 60,
-            alignItems: "center",
-          }}
-        >
+        <div className="solution-grid">
           <div>
             <motion.p
               initial="hidden"
@@ -167,6 +160,7 @@ export default function Solution() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.8 }}
+            className="solution-svg"
             style={{ display: "flex", justifyContent: "center" }}
           >
             <svg
