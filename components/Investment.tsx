@@ -66,8 +66,8 @@ export default function Investment() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.1,
               }}
@@ -151,7 +151,7 @@ export default function Investment() {
                 >
                   <h3
                     style={{
-                      fontFamily: "var(--font-bebas-neue)",
+                      fontFamily: "var(--font-unbounded)",
                       fontSize: 20,
                       color: "#ffffff",
                       letterSpacing: 2,
@@ -167,7 +167,7 @@ export default function Investment() {
                       border: `1px solid ${block.color}30`,
                       borderRadius: 20,
                       padding: "4px 12px",
-                      fontFamily: "var(--font-bebas-neue)",
+                      fontFamily: "var(--font-unbounded)",
                       fontSize: 15,
                       color: block.color,
                       letterSpacing: 1,
@@ -181,7 +181,7 @@ export default function Investment() {
                   style={{
                     color: "rgba(255,255,255,0.5)",
                     fontSize: 13,
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                     lineHeight: 1.7,
                   }}
                 >

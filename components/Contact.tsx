@@ -31,10 +31,10 @@ export default function Contact() {
         >
           <h2
             style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(48px, 8vw, 96px)",
-              lineHeight: 1,
-              marginBottom: 12,
+              fontFamily: "var(--font-unbounded)",
+              fontSize: "clamp(32px, 5vw, 60px)",
+              lineHeight: 1.1,
+              marginBottom: 16,
             }}
           >
             <span style={{ color: "#ffffff" }}>L&apos;Afrique brille.</span>
@@ -49,7 +49,7 @@ export default function Contact() {
               color: "rgba(255,255,255,0.5)",
               fontSize: 16,
               fontStyle: "italic",
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
               lineHeight: 1.8,
               marginBottom: 8,
             }}
@@ -61,7 +61,7 @@ export default function Contact() {
               color: "rgba(255,255,255,0.4)",
               fontSize: 15,
               fontStyle: "italic",
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
               lineHeight: 1.8,
             }}
           >
@@ -78,7 +78,7 @@ export default function Contact() {
           className="shadow-glow"
           style={{
             backgroundColor: "#1A1A1A",
-            borderRadius: 8,
+            borderRadius: 24,
             padding: "40px 48px",
             border: "1px solid rgba(173,255,47,0.3)",
             marginBottom: 40,
@@ -97,8 +97,8 @@ export default function Contact() {
             <div>
               <p
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 22,
+                  fontFamily: "var(--font-unbounded)",
+                  fontSize: 15,
                   color: "#ADFF2F",
                   letterSpacing: 2,
                   lineHeight: 1,
@@ -110,7 +110,7 @@ export default function Contact() {
                 style={{
                   color: "rgba(255,255,255,0.4)",
                   fontSize: 12,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   letterSpacing: 2,
                   textTransform: "uppercase",
                   marginTop: 4,
@@ -149,7 +149,7 @@ export default function Contact() {
                   style={{
                     color: "rgba(255,255,255,0.7)",
                     fontSize: 15,
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                   }}
                 >
                   {text}

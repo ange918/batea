@@ -61,8 +61,8 @@ export default function Problem() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.1,
               }}
@@ -128,8 +128,8 @@ export default function Problem() {
 
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 30,
+                  fontFamily: "var(--font-unbounded)",
+                  fontSize: 18,
                   color: "#ffffff",
                   marginBottom: 12,
                   letterSpacing: 1,
@@ -141,7 +141,7 @@ export default function Problem() {
                 style={{
                   color: "rgba(255,255,255,0.55)",
                   fontSize: 14,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.7,
                   marginBottom: 28,
                 }}
@@ -160,8 +160,8 @@ export default function Problem() {
               >
                 <p
                   style={{
-                    fontFamily: "var(--font-bebas-neue)",
-                    fontSize: 32,
+                    fontFamily: "var(--font-unbounded)",
+                    fontSize: 20,
                     color: "#C9A84C",
                     lineHeight: 1,
                     marginBottom: 4,
@@ -173,7 +173,7 @@ export default function Problem() {
                   style={{
                     color: "rgba(255,255,255,0.35)",
                     fontSize: 11,
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                     fontStyle: "italic",
                   }}
                 >

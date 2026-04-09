@@ -71,8 +71,8 @@ export default function BusinessModel() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.1,
               }}
@@ -114,7 +114,7 @@ export default function BusinessModel() {
                   position: "absolute",
                   top: 12,
                   right: 18,
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 80,
                   color: `${card.color}08`,
                   lineHeight: 1,
@@ -145,7 +145,7 @@ export default function BusinessModel() {
                     fontWeight: 700,
                     letterSpacing: 2,
                     textTransform: "uppercase",
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                   }}
                 >
                   {card.title}
@@ -155,7 +155,7 @@ export default function BusinessModel() {
               {/* Price badge */}
               <p
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 28,
                   color: "#ffffff",
                   letterSpacing: 1,
@@ -170,7 +170,7 @@ export default function BusinessModel() {
                 style={{
                   color: "rgba(255,255,255,0.5)",
                   fontSize: 13,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.7,
                 }}
               >
@@ -227,7 +227,7 @@ export default function BusinessModel() {
           </div>
           <div
             style={{
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
               fontSize: 14,
               color: "rgba(255,255,255,0.7)",
               lineHeight: 2,

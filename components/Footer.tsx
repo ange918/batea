@@ -22,10 +22,10 @@ export default function Footer() {
               <SparklesIcon style={{ width: 24, height: 24, color: "#ADFF2F" }} />
               <span
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 24,
+                  fontFamily: "var(--font-unbounded)",
+                  fontSize: 16,
                   color: "#ADFF2F",
-                  letterSpacing: 3,
+                  letterSpacing: 1,
                 }}
               >
                 NIGHTGLOW
@@ -36,7 +36,7 @@ export default function Footer() {
                 color: "rgba(255,255,255,0.4)",
                 fontSize: 13,
                 fontStyle: "italic",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 lineHeight: 1.6,
                 maxWidth: 280,
               }}
@@ -50,9 +50,9 @@ export default function Footer() {
               style={{
                 color: "#ADFF2F",
                 fontSize: 11,
-                letterSpacing: 3,
+                letterSpacing: 1,
                 textTransform: "uppercase",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 fontWeight: 600,
                 marginBottom: 16,
               }}
@@ -67,7 +67,7 @@ export default function Footer() {
                   display: "block",
                   color: "rgba(255,255,255,0.45)",
                   fontSize: 13,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   textDecoration: "none",
                   marginBottom: 8,
                   transition: "color 0.2s",
@@ -89,9 +89,9 @@ export default function Footer() {
               style={{
                 color: "#ADFF2F",
                 fontSize: 11,
-                letterSpacing: 3,
+                letterSpacing: 1,
                 textTransform: "uppercase",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 fontWeight: 600,
                 marginBottom: 16,
               }}
@@ -108,7 +108,7 @@ export default function Footer() {
                 style={{
                   color: "rgba(255,255,255,0.4)",
                   fontSize: 13,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   marginBottom: 8,
                   lineHeight: 1.5,
                 }}
@@ -123,9 +123,9 @@ export default function Footer() {
               style={{
                 color: "#ADFF2F",
                 fontSize: 11,
-                letterSpacing: 3,
+                letterSpacing: 1,
                 textTransform: "uppercase",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 fontWeight: 600,
                 marginBottom: 16,
               }}
@@ -136,7 +136,7 @@ export default function Footer() {
               style={{
                 color: "rgba(255,255,255,0.4)",
                 fontSize: 13,
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 marginBottom: 8,
               }}
             >
@@ -162,7 +162,7 @@ export default function Footer() {
               style={{
                 color: "rgba(255,255,255,0.35)",
                 fontSize: 12,
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
               }}
             >
               Marque déposée OAPI — 4 classes — 17 pays africains protégés
@@ -172,7 +172,7 @@ export default function Footer() {
             style={{
               color: "rgba(255,255,255,0.25)",
               fontSize: 12,
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
             }}
           >
             © 2025 NightGlow. Tous droits réservés. Cotonou, République du Bénin.

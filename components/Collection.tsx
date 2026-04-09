@@ -72,8 +72,8 @@ export default function Collection() {
           </div>
           <h2
             style={{
-              fontFamily: "var(--font-bebas-neue)",
-              fontSize: "clamp(36px, 5vw, 64px)",
+              fontFamily: "var(--font-unbounded)",
+              fontSize: "clamp(22px, 3.5vw, 40px)",
               color: "#ffffff",
               lineHeight: 1.1,
               marginBottom: 12,
@@ -86,7 +86,7 @@ export default function Collection() {
               color: "rgba(255,255,255,0.5)",
               fontSize: 15,
               fontStyle: "italic",
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
               marginBottom: 40,
             }}
           >
@@ -123,7 +123,7 @@ export default function Collection() {
                 border: "none",
                 cursor: "pointer",
                 fontSize: 13,
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 fontWeight: 600,
                 letterSpacing: 1,
                 transition: "all 0.3s",
@@ -145,7 +145,7 @@ export default function Collection() {
                 border: "none",
                 cursor: "pointer",
                 fontSize: 13,
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 fontWeight: 600,
                 letterSpacing: 1,
                 transition: "all 0.3s",
@@ -230,7 +230,7 @@ export default function Collection() {
                     y="86"
                     textAnchor="middle"
                     fontSize="20"
-                    fontFamily="var(--font-bebas-neue)"
+                    fontFamily="var(--font-unbounded)"
                     fill={night ? "#ADFF2F" : "rgba(255,255,255,0.4)"}
                   >
                     {product.motif}
@@ -257,7 +257,7 @@ export default function Collection() {
               <div style={{ padding: "20px 24px" }}>
                 <h3
                   style={{
-                    fontFamily: "var(--font-bebas-neue)",
+                    fontFamily: "var(--font-unbounded)",
                     fontSize: 22,
                     color: "#ffffff",
                     marginBottom: 8,
@@ -268,7 +268,7 @@ export default function Collection() {
                 </h3>
                 <p
                   style={{
-                    fontFamily: "var(--font-bebas-neue)",
+                    fontFamily: "var(--font-unbounded)",
                     fontSize: 24,
                     color: "#ADFF2F",
                     letterSpacing: 1,
@@ -296,7 +296,7 @@ export default function Collection() {
               letterSpacing: 2,
               textTransform: "uppercase",
               textDecoration: "none",
-              fontFamily: "var(--font-dm-sans)",
+              fontFamily: "var(--font-montserrat)",
               borderRadius: 2,
               transition: "all 0.2s",
             }}

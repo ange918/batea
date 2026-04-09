@@ -120,8 +120,8 @@ export default function Market() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.1,
               }}
@@ -165,7 +165,7 @@ export default function Market() {
               />
               <div
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 44,
                   color: m.borderColor,
                   lineHeight: 1,
@@ -182,7 +182,7 @@ export default function Market() {
                 style={{
                   color: "rgba(255,255,255,0.5)",
                   fontSize: 13,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.5,
                 }}
               >
@@ -216,7 +216,7 @@ export default function Market() {
               <BuildingOffice2Icon style={{ width: 28, height: 28, color: "#ADFF2F" }} />
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 22,
                   color: "#ADFF2F",
                   letterSpacing: 2,
@@ -236,7 +236,7 @@ export default function Market() {
                 style={{
                   color: "rgba(255,255,255,0.6)",
                   fontSize: 14,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.6,
                   marginBottom: 10,
                   paddingLeft: 16,
@@ -265,7 +265,7 @@ export default function Market() {
               <GlobeAltIcon style={{ width: 28, height: 28, color: "#C9A84C" }} />
               <h3
                 style={{
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 22,
                   color: "#C9A84C",
                   letterSpacing: 2,
@@ -285,7 +285,7 @@ export default function Market() {
                 style={{
                   color: "rgba(255,255,255,0.6)",
                   fontSize: 14,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.6,
                   marginBottom: 10,
                   paddingLeft: 16,

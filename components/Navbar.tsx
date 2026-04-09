@@ -75,10 +75,10 @@ export default function Navbar() {
             <SparklesIcon style={{ width: 24, height: 24, color: "#ADFF2F" }} />
             <span
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: 24,
+                fontFamily: "var(--font-unbounded)",
+                fontSize: 16,
                 color: "#ADFF2F",
-                letterSpacing: 3,
+                letterSpacing: 1,
               }}
             >
               NIGHTGLOW
@@ -98,7 +98,7 @@ export default function Navbar() {
                   fontWeight: 500,
                   letterSpacing: 2,
                   textTransform: "uppercase",
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   transition: "color 0.2s",
                 }}
                 onMouseEnter={(e) =>
@@ -205,9 +205,9 @@ export default function Navbar() {
                     gap: 16,
                     color: "#ffffff",
                     textDecoration: "none",
-                    fontFamily: "var(--font-bebas-neue)",
+                    fontFamily: "var(--font-unbounded)",
                     fontSize: 36,
-                    letterSpacing: 3,
+                    letterSpacing: 1,
                     padding: "14px 24px",
                     borderBottom: "1px solid rgba(255,255,255,0.04)",
                     transition: "color 0.2s",
@@ -221,7 +221,7 @@ export default function Navbar() {
                 >
                   <span
                     style={{
-                      fontFamily: "var(--font-dm-sans)",
+                      fontFamily: "var(--font-montserrat)",
                       fontSize: 11,
                       color: "#ADFF2F",
                       letterSpacing: 2,
@@ -254,10 +254,10 @@ export default function Navbar() {
                   padding: "16px 24px",
                   fontSize: 14,
                   fontWeight: 700,
-                  letterSpacing: 3,
+                  letterSpacing: 1,
                   textTransform: "uppercase",
                   textDecoration: "none",
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   borderRadius: 10,
                 }}
               >
@@ -270,7 +270,7 @@ export default function Navbar() {
                   textAlign: "center",
                   color: "rgba(255,255,255,0.25)",
                   fontSize: 11,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   marginTop: 20,
                   letterSpacing: 1,
                 }}

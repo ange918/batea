@@ -60,8 +60,8 @@ export default function Team() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.1,
               }}
@@ -129,10 +129,10 @@ export default function Team() {
               >
                 <span
                   style={{
-                    fontFamily: "var(--font-bebas-neue)",
+                    fontFamily: "var(--font-unbounded)",
                     fontSize: 26,
                     color: m.color,
-                    letterSpacing: 3,
+                    letterSpacing: 1,
                   }}
                 >
                   {m.initials}
@@ -151,7 +151,7 @@ export default function Team() {
 
               <h3
                 style={{
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: 15,
                   color: "#ffffff",
                   fontWeight: 700,
@@ -176,7 +176,7 @@ export default function Team() {
                   style={{
                     color: m.color,
                     fontSize: 11,
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                     fontWeight: 600,
                     letterSpacing: 1.5,
                     textTransform: "uppercase",
@@ -191,7 +191,7 @@ export default function Team() {
                   style={{
                     color: "rgba(255,255,255,0.45)",
                     fontSize: 13,
-                    fontFamily: "var(--font-dm-sans)",
+                    fontFamily: "var(--font-montserrat)",
                     lineHeight: 1.7,
                     fontStyle: "italic",
                     marginTop: 4,

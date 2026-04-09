@@ -58,8 +58,8 @@ export default function Solution() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
                 lineHeight: 1.05,
               }}
@@ -80,7 +80,7 @@ export default function Solution() {
               style={{
                 color: "rgba(255,255,255,0.65)",
                 fontSize: 16,
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
                 lineHeight: 1.8,
                 marginBottom: 40,
               }}
@@ -113,8 +113,8 @@ export default function Solution() {
                       style={{
                         color: "#ADFF2F",
                         fontSize: 13,
-                        letterSpacing: 3,
-                        fontFamily: "var(--font-dm-sans)",
+                        letterSpacing: 1,
+                        fontFamily: "var(--font-montserrat)",
                         fontWeight: 700,
                         marginBottom: 6,
                       }}
@@ -125,7 +125,7 @@ export default function Solution() {
                       style={{
                         color: "rgba(255,255,255,0.6)",
                         fontSize: 14,
-                        fontFamily: "var(--font-dm-sans)",
+                        fontFamily: "var(--font-montserrat)",
                         lineHeight: 1.6,
                       }}
                     >

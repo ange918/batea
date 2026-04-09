@@ -48,8 +48,8 @@ export default function Sectors() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(36px, 5vw, 64px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(22px, 3.5vw, 40px)",
                 color: "#ffffff",
               lineHeight: 1.1,
             }}
@@ -95,7 +95,7 @@ export default function Sectors() {
                   position: "absolute",
                   bottom: 8,
                   right: 14,
-                  fontFamily: "var(--font-bebas-neue)",
+                  fontFamily: "var(--font-unbounded)",
                   fontSize: 56,
                   color: `${sector.color}08`,
                   lineHeight: 1,
@@ -133,7 +133,7 @@ export default function Sectors() {
                   letterSpacing: 2,
                   padding: "2px 8px",
                   borderRadius: 20,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   marginBottom: 8,
                 }}
               >
@@ -142,7 +142,7 @@ export default function Sectors() {
 
               <h3
                 style={{
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   fontSize: 14,
                   color: "#ffffff",
                   fontWeight: 600,

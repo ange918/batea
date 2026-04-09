@@ -119,7 +119,7 @@ export default function Hero() {
                 fontFamily: "var(--font-montserrat)",
                 fontSize: 11,
                 fontWeight: 600,
-                letterSpacing: 3,
+                letterSpacing: 1,
                 textTransform: "uppercase",
                 color: "#ADFF2F",
               }}

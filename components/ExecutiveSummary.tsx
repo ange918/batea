@@ -82,8 +82,8 @@ export default function ExecutiveSummary() {
             </div>
             <h2
               style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(40px, 6vw, 72px)",
+                fontFamily: "var(--font-unbounded)",
+                fontSize: "clamp(24px, 4vw, 48px)",
                 color: "#ffffff",
                 lineHeight: 1,
               }}
@@ -130,8 +130,8 @@ export default function ExecutiveSummary() {
                   position: "absolute",
                   top: 16,
                   right: 20,
-                  fontFamily: "var(--font-bebas-neue)",
-                  fontSize: 52,
+                  fontFamily: "var(--font-unbounded)",
+                  fontSize: 18,
                   color: `${card.color}10`,
                   lineHeight: 1,
                   userSelect: "none",
@@ -162,9 +162,9 @@ export default function ExecutiveSummary() {
                 style={{
                   color: card.color,
                   fontSize: 11,
-                  letterSpacing: 4,
+                  letterSpacing: 1.5,
                   textTransform: "uppercase",
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   marginBottom: 8,
                   fontWeight: 700,
                 }}
@@ -177,7 +177,7 @@ export default function ExecutiveSummary() {
                 style={{
                   color: "rgba(255,255,255,0.55)",
                   fontSize: 14,
-                  fontFamily: "var(--font-dm-sans)",
+                  fontFamily: "var(--font-montserrat)",
                   lineHeight: 1.7,
                 }}
               >
