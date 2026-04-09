@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Bebas_Neue, DM_Sans } from "next/font/google";
+import { Bebas_Neue, DM_Sans, Unbounded, Montserrat } from "next/font/google";
 import "./globals.css";
 
 const bebasNeue = Bebas_Neue({
@@ -10,6 +10,18 @@ const bebasNeue = Bebas_Neue({
 
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+});
+
+const unbounded = Unbounded({
+  variable: "--font-unbounded",
+  subsets: ["latin"],
+  weight: ["400", "600", "700", "800", "900"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
 });
@@ -27,7 +39,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${bebasNeue.variable} ${dmSans.variable} antialiased`}>
+      <body
+        className={`${bebasNeue.variable} ${dmSans.variable} ${unbounded.variable} ${montserrat.variable} antialiased`}
+      >
         {children}
       </body>
     </html>

@@ -12,6 +12,8 @@
   --color-violet: #B388FF;
   --font-bebas: var(--font-bebas-neue);
   --font-dm: var(--font-dm-sans);
+  --font-hero: var(--font-unbounded);
+  --font-body: var(--font-montserrat);
 }
 
 html {

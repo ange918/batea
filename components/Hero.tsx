@@ -1,12 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import {
-  PhoneIcon,
-  EnvelopeIcon,
-  MapPinIcon,
-  ArrowRightIcon,
-} from "@heroicons/react/24/outline";
+import { ArrowRightIcon } from "@heroicons/react/24/outline";
 
 type Particle = { id: number; left: string; size: number; duration: number; delay: number };
 
@@ -15,12 +10,12 @@ function seededRandom(seed: number) {
   return x - Math.floor(x);
 }
 
-const particles: Particle[] = Array.from({ length: 14 }, (_, i) => ({
+const particles: Particle[] = Array.from({ length: 10 }, (_, i) => ({
   id: i,
   left: `${seededRandom(i * 3) * 100}%`,
-  size: seededRandom(i * 3 + 1) * 4 + 2,
-  duration: seededRandom(i * 3 + 2) * 4 + 3,
-  delay: seededRandom(i * 5) * 3,
+  size: seededRandom(i * 3 + 1) * 3 + 2,
+  duration: seededRandom(i * 3 + 2) * 5 + 4,
+  delay: seededRandom(i * 5) * 4,
 }));
 
 export default function Hero() {
@@ -33,27 +28,34 @@ export default function Hero() {
       style={{
         minHeight: "100vh",
         backgroundColor: "#0A0A0A",
-        position: "relative",
         display: "flex",
+        flexDirection: "column",
         alignItems: "center",
+        justifyContent: "center",
+        textAlign: "center",
+        padding: "120px 24px 80px",
+        position: "relative",
         overflow: "hidden",
       }}
     >
-      {/* Left accent bar */}
+      {/* Subtle ambient glow background */}
       <div
         style={{
           position: "absolute",
-          left: 0,
-          top: 0,
-          bottom: 0,
-          width: 3,
-          backgroundColor: "#ADFF2F",
-          boxShadow: "0 0 20px rgba(173,255,47,0.6)",
-          zIndex: 2,
+          top: "30%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+          width: "60vw",
+          height: "60vw",
+          maxWidth: 600,
+          maxHeight: 600,
+          borderRadius: "50%",
+          background: "radial-gradient(circle, rgba(173,255,47,0.05) 0%, transparent 70%)",
+          pointerEvents: "none",
         }}
       />
 
-      {/* Particles */}
+      {/* Subtle rising particles */}
       {mounted && particles.map((p) => (
         <motion.div
           key={p.id}
@@ -65,84 +67,31 @@ export default function Hero() {
             height: p.size,
             borderRadius: "50%",
             backgroundColor: "#ADFF2F",
-            boxShadow: `0 0 ${p.size * 3}px rgba(173,255,47,0.8)`,
-            zIndex: 1,
+            boxShadow: `0 0 ${p.size * 3}px rgba(173,255,47,0.7)`,
+            zIndex: 0,
           }}
-          animate={{ y: [0, -900], opacity: [0, 1, 1, 0] }}
+          animate={{ y: [0, -800], opacity: [0, 0.8, 0.8, 0] }}
           transition={{ duration: p.duration, delay: p.delay, repeat: Infinity, ease: "linear" }}
         />
       ))}
 
-      {/* Vertical editorial label */}
-      <div
-        className="hero-vert-label"
-        style={{
-          position: "absolute",
-          left: 18,
-          top: "50%",
-          transform: "translateY(-50%) rotate(-90deg)",
-          transformOrigin: "center center",
-          whiteSpace: "nowrap",
-          fontFamily: "var(--font-dm-sans)",
-          fontSize: 9,
-          letterSpacing: 5,
-          textTransform: "uppercase",
-          color: "rgba(173,255,47,0.35)",
-          zIndex: 3,
-          userSelect: "none",
-        }}
-      >
-        NIGHTGLOW · COTONOU, BÉNIN · PITCH DECK 2025–2026
-      </div>
-
-      {/* Giant watermark text — magazine editorial */}
+      {/* Content */}
       <div
         style={{
-          position: "absolute",
-          bottom: -10,
-          left: -10,
-          right: 0,
-          overflow: "hidden",
-          zIndex: 1,
-          pointerEvents: "none",
-          userSelect: "none",
-          lineHeight: 1,
-        }}
-      >
-        <span
-          style={{
-            fontFamily: "var(--font-bebas-neue)",
-            fontSize: "clamp(100px, 22vw, 300px)",
-            color: "transparent",
-            WebkitTextStroke: "1px rgba(173,255,47,0.07)",
-            letterSpacing: 8,
-            whiteSpace: "nowrap",
-            display: "block",
-          }}
-        >
-          NIGHTGLOW
-        </span>
-      </div>
-
-      {/* Main grid */}
-      <div
-        className="hero-grid"
-        style={{
-          maxWidth: 1280,
-          margin: "0 auto",
-          padding: "110px 40px 80px 60px",
-          width: "100%",
           position: "relative",
-          zIndex: 4,
+          zIndex: 1,
+          maxWidth: 680,
+          width: "100%",
+          margin: "0 auto",
         }}
       >
-        {/* Content left */}
+        {/* Eyebrow pill — like Meetup's clean label */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
+          initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
+          transition={{ duration: 0.5, ease: "easeOut" }}
+          style={{ display: "flex", justifyContent: "center", marginBottom: 32 }}
         >
-          {/* Eyebrow pill */}
           <div
             style={{
               display: "inline-flex",
@@ -151,237 +100,213 @@ export default function Hero() {
               backgroundColor: "rgba(173,255,47,0.08)",
               border: "1px solid rgba(173,255,47,0.2)",
               borderRadius: 40,
-              padding: "6px 16px",
-              marginBottom: 32,
+              padding: "8px 20px",
             }}
           >
             <span
               style={{
-                width: 6,
-                height: 6,
+                width: 7,
+                height: 7,
                 borderRadius: "50%",
                 backgroundColor: "#ADFF2F",
                 display: "inline-block",
-                boxShadow: "0 0 8px rgba(173,255,47,0.8)",
+                boxShadow: "0 0 8px rgba(173,255,47,1)",
+                animation: "glow-pulse 1.5s ease-in-out infinite",
               }}
             />
             <span
               style={{
-                color: "#ADFF2F",
-                fontSize: 10,
-                letterSpacing: 4,
-                textTransform: "uppercase",
-                fontFamily: "var(--font-dm-sans)",
+                fontFamily: "var(--font-montserrat)",
+                fontSize: 11,
                 fontWeight: 600,
-              }}
-            >
-              PITCH DECK · 2025–2026
-            </span>
-          </div>
-
-          {/* Title — magazine style split */}
-          <h1 style={{ fontFamily: "var(--font-bebas-neue)", lineHeight: 0.9, marginBottom: 28 }}>
-            <span
-              style={{
-                display: "block",
-                fontSize: "clamp(80px, 14vw, 160px)",
-                color: "#ffffff",
-                letterSpacing: 2,
-              }}
-            >
-              NIGHT
-            </span>
-            <span
-              className="glow-text-pulse"
-              style={{
-                display: "block",
-                fontSize: "clamp(80px, 14vw, 160px)",
+                letterSpacing: 3,
+                textTransform: "uppercase",
                 color: "#ADFF2F",
-                letterSpacing: 2,
               }}
             >
-              GLOW
+              Marque africaine · Cotonou, Bénin
             </span>
-          </h1>
-
-          {/* Taglines */}
-          <p
-            style={{
-              color: "rgba(255,255,255,0.75)",
-              fontSize: "clamp(16px, 2vw, 22px)",
-              fontStyle: "italic",
-              marginBottom: 8,
-              fontFamily: "var(--font-dm-sans)",
-              fontWeight: 300,
-            }}
-          >
-            L&apos;Afrique brille. Même dans le noir.
-          </p>
-          <p
-            style={{
-              color: "rgba(255,255,255,0.4)",
-              fontSize: 13,
-              fontFamily: "var(--font-dm-sans)",
-              marginBottom: 36,
-              lineHeight: 1.6,
-            }}
-          >
-            Marque africaine de design phosphorescent · Mode, Art, Événements, Décoration &amp; Innovation
-          </p>
-
-          {/* Contact info */}
-          <div
-            style={{
-              borderTop: "1px solid rgba(255,255,255,0.08)",
-              paddingTop: 24,
-              marginBottom: 32,
-              display: "flex",
-              flexDirection: "column",
-              gap: 10,
-            }}
-          >
-            {[
-              { icon: PhoneIcon, text: "+229 01 52 51 45 53" },
-              { icon: EnvelopeIcon, text: "mikegtnm15@gmail.com" },
-              { icon: MapPinIcon, text: "Cotonou, République du Bénin" },
-            ].map(({ icon: Icon, text }) => (
-              <div key={text} style={{ display: "flex", alignItems: "center", gap: 10 }}>
-                <Icon style={{ width: 16, height: 16, color: "#ADFF2F", flexShrink: 0 }} />
-                <span
-                  style={{
-                    color: "rgba(255,255,255,0.6)",
-                    fontSize: 13,
-                    fontFamily: "var(--font-dm-sans)",
-                  }}
-                >
-                  {text}
-                </span>
-              </div>
-            ))}
-          </div>
-
-          {/* CTA — pill style */}
-          <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-            <a
-              href="#collection"
-              className="btn-pill-primary"
-            >
-              Découvrir la collection
-              <ArrowRightIcon style={{ width: 16, height: 16 }} />
-            </a>
-            <a
-              href="#resume"
-              className="btn-pill-ghost"
-            >
-              Le pitch deck
-            </a>
           </div>
         </motion.div>
 
-        {/* Decorative right — desktop only */}
-        <motion.div
-          initial={{ opacity: 0, x: 40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1.1, delay: 0.3, ease: "easeOut" }}
-          className="hero-svg"
-          style={{ position: "relative" }}
+        {/* Main headline — Unbounded, bold, centered like Meetup */}
+        <motion.h1
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.1, ease: "easeOut" }}
+          style={{
+            fontFamily: "var(--font-unbounded)",
+            fontWeight: 800,
+            fontSize: "clamp(28px, 7vw, 72px)",
+            lineHeight: 1.15,
+            marginBottom: 24,
+            letterSpacing: -1,
+          }}
         >
-          {/* Outlined big "NightGlow" stacked — magazine style */}
-          <div
+          <span style={{ color: "#ffffff" }}>L&apos;Afrique brille.{" "}</span>
+          <span
+            className="glow-text-pulse"
+            style={{ color: "#ADFF2F" }}
+          >
+            Même dans le noir.
+          </span>
+        </motion.h1>
+
+        {/* Subtitle — Montserrat, clean like Meetup's description */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+          style={{
+            fontFamily: "var(--font-montserrat)",
+            fontSize: "clamp(15px, 2vw, 17px)",
+            color: "rgba(255,255,255,0.55)",
+            lineHeight: 1.8,
+            marginBottom: 40,
+            maxWidth: 520,
+            marginLeft: "auto",
+            marginRight: "auto",
+          }}
+        >
+          Produits phosphorescents qui absorbent la lumière le jour et la restituent la nuit —
+          sans électricité, sans pile, sans artifice. Mode, Art, Décoration &amp; Innovation.
+        </motion.p>
+
+        {/* Single wide pill CTA — exactly like Meetup's "Join Meetup" button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          style={{ display: "flex", justifyContent: "center", marginBottom: 64 }}
+        >
+          <a
+            href="#collection"
             style={{
-              position: "relative",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "flex-end",
-              gap: 0,
+              display: "inline-flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: 10,
+              backgroundColor: "#ADFF2F",
+              color: "#0A0A0A",
+              padding: "18px 56px",
+              fontSize: 15,
+              fontWeight: 700,
+              fontFamily: "var(--font-montserrat)",
+              letterSpacing: 0.5,
+              textDecoration: "none",
+              borderRadius: 50,
+              border: "none",
+              transition: "background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease",
+              minWidth: 240,
+            }}
+            onMouseEnter={(e) => {
+              const el = e.currentTarget;
+              el.style.backgroundColor = "#c8f23a";
+              el.style.transform = "translateY(-2px)";
+              el.style.boxShadow = "0 10px 40px rgba(173,255,47,0.4)";
+            }}
+            onMouseLeave={(e) => {
+              const el = e.currentTarget;
+              el.style.backgroundColor = "#ADFF2F";
+              el.style.transform = "translateY(0)";
+              el.style.boxShadow = "none";
             }}
           >
-            {/* Top outlined stroke letters */}
-            <span
-              style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(60px, 9vw, 120px)",
-                color: "transparent",
-                WebkitTextStroke: "2px rgba(173,255,47,0.25)",
-                letterSpacing: 4,
-                lineHeight: 0.9,
-                display: "block",
-                userSelect: "none",
-              }}
-            >
-              NIGHT
-            </span>
-            <span
-              style={{
-                fontFamily: "var(--font-bebas-neue)",
-                fontSize: "clamp(60px, 9vw, 120px)",
-                color: "rgba(173,255,47,0.06)",
-                WebkitTextStroke: "2px rgba(173,255,47,0.5)",
-                letterSpacing: 4,
-                lineHeight: 0.9,
-                display: "block",
-                userSelect: "none",
-                textShadow: "0 0 60px rgba(173,255,47,0.15)",
-              }}
-            >
-              GLOW
-            </span>
+            Découvrir la collection
+            <ArrowRightIcon style={{ width: 18, height: 18 }} />
+          </a>
+        </motion.div>
 
-            {/* Phosphorescent glow orb */}
-            <div
-              style={{
-                position: "absolute",
-                top: "50%",
-                left: "50%",
-                transform: "translate(-50%, -50%)",
-                width: 180,
-                height: 180,
-                borderRadius: "50%",
-                background: "radial-gradient(circle, rgba(173,255,47,0.12) 0%, transparent 70%)",
-                pointerEvents: "none",
-              }}
-            />
+        {/* Visual illustration below — like Meetup's group photo section */}
+        <motion.div
+          initial={{ opacity: 0, y: 40, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.9, delay: 0.45, ease: "easeOut" }}
+          style={{ position: "relative", display: "flex", justifyContent: "center" }}
+        >
+          {/* Glow blob behind — like Meetup's purple blobs */}
+          <div
+            style={{
+              position: "absolute",
+              bottom: 0,
+              left: "50%",
+              transform: "translateX(-50%)",
+              width: 320,
+              height: 140,
+              borderRadius: "50%",
+              background: "radial-gradient(ellipse, rgba(173,255,47,0.18) 0%, transparent 70%)",
+              filter: "blur(20px)",
+              zIndex: 0,
+            }}
+          />
 
-            {/* Small SVG decorative figure */}
+          {/* SVG phosphorescent figure + decorative dots */}
+          <div style={{ position: "relative", zIndex: 1 }}>
             <svg
-              width={200}
-              height={200}
-              viewBox="0 0 200 200"
+              width={260}
+              height={300}
+              viewBox="0 0 260 300"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              style={{
-                marginTop: 16,
-                filter: "drop-shadow(0 0 20px rgba(173,255,47,0.3))",
-                opacity: 0.8,
-              }}
+              style={{ filter: "drop-shadow(0 0 24px rgba(173,255,47,0.5))" }}
             >
-              <circle cx="100" cy="50" r="20" stroke="#ADFF2F" strokeWidth="1.5" />
-              <path d="M85 70 C70 100 60 130 70 160 H130 C140 130 130 100 115 70 Z" stroke="#ADFF2F" strokeWidth="1.5" fill="none" />
-              <line x1="70" y1="160" x2="50" y2="180" stroke="#ADFF2F" strokeWidth="1.5" opacity="0.5" />
-              <line x1="130" y1="160" x2="150" y2="180" stroke="#ADFF2F" strokeWidth="1.5" opacity="0.5" />
-              <path d="M75 110 Q85 120 100 115 Q115 120 125 110" stroke="#ADFF2F" strokeWidth="1" fill="none" opacity="0.6" />
-              <circle cx="30" cy="80" r="3" fill="#ADFF2F" opacity="0.5" />
-              <circle cx="170" cy="60" r="4" fill="#ADFF2F" opacity="0.4" />
-              <circle cx="20" cy="140" r="2" fill="#ADFF2F" opacity="0.6" />
-              <circle cx="175" cy="140" r="3" fill="#ADFF2F" opacity="0.35" />
+              {/* Person silhouette — phosphorescent */}
+              <circle cx="130" cy="55" r="28" stroke="#ADFF2F" strokeWidth="2" />
+              <path d="M100 83 C80 120 70 155 80 200 H180 C190 155 180 120 160 83 Z" stroke="#ADFF2F" strokeWidth="2" fill="rgba(173,255,47,0.04)" />
+              <path d="M80 200 L55 260 H105 L130 230 L155 260 H205 L180 200 Z" stroke="#ADFF2F" strokeWidth="2" fill="rgba(173,255,47,0.04)" />
+              {/* Arms out */}
+              <path d="M100 120 L40 100 M160 120 L220 100" stroke="#ADFF2F" strokeWidth="2" />
+              {/* Glow dots on arms */}
+              <circle cx="40" cy="100" r="5" fill="#ADFF2F" opacity="0.9" />
+              <circle cx="220" cy="100" r="5" fill="#ADFF2F" opacity="0.9" />
+              {/* Shirt motif lines */}
+              <path d="M110 130 Q130 145 150 130" stroke="#ADFF2F" strokeWidth="1.5" fill="none" opacity="0.6" />
+              <path d="M115 145 Q130 158 145 145" stroke="#ADFF2F" strokeWidth="1" fill="none" opacity="0.4" />
+              {/* Ambient glow dots */}
+              <circle cx="20" cy="60" r="3" fill="#ADFF2F" opacity="0.5" />
+              <circle cx="240" cy="80" r="4" fill="#ADFF2F" opacity="0.4" />
+              <circle cx="15" cy="180" r="2" fill="#ADFF2F" opacity="0.6" />
+              <circle cx="245" cy="200" r="3" fill="#ADFF2F" opacity="0.35" />
+              <circle cx="50" cy="250" r="2" fill="#ADFF2F" opacity="0.3" />
+              <circle cx="210" cy="260" r="2.5" fill="#ADFF2F" opacity="0.4" />
             </svg>
 
-            {/* Founding tag */}
-            <div
+            {/* Floating stats badge — like Meetup cards */}
+            <motion.div
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
               style={{
-                display: "inline-flex",
-                alignItems: "center",
-                gap: 8,
-                border: "1px solid rgba(173,255,47,0.2)",
-                borderRadius: 40,
-                padding: "8px 16px",
-                marginTop: 20,
+                position: "absolute",
+                top: 20,
+                right: -20,
+                backgroundColor: "#1A1A1A",
+                border: "1px solid rgba(173,255,47,0.25)",
+                borderRadius: 14,
+                padding: "10px 16px",
+                textAlign: "left",
               }}
             >
-              <span style={{ fontSize: 10, fontFamily: "var(--font-dm-sans)", color: "rgba(255,255,255,0.4)", letterSpacing: 3, textTransform: "uppercase" }}>
-                Fondé à Cotonou · Bénin · 2025
-              </span>
-            </div>
+              <p style={{ fontFamily: "var(--font-unbounded)", fontSize: 20, fontWeight: 700, color: "#ADFF2F", lineHeight: 1 }}>7</p>
+              <p style={{ fontFamily: "var(--font-montserrat)", fontSize: 9, color: "rgba(255,255,255,0.5)", letterSpacing: 1, textTransform: "uppercase", marginTop: 2 }}>Secteurs</p>
+            </motion.div>
+
+            <motion.div
+              animate={{ y: [0, -6, 0] }}
+              transition={{ duration: 2.5, delay: 0.5, repeat: Infinity, ease: "easeInOut" }}
+              style={{
+                position: "absolute",
+                bottom: 40,
+                left: -30,
+                backgroundColor: "#1A1A1A",
+                border: "1px solid rgba(173,255,47,0.25)",
+                borderRadius: 14,
+                padding: "10px 16px",
+                textAlign: "left",
+              }}
+            >
+              <p style={{ fontFamily: "var(--font-unbounded)", fontSize: 20, fontWeight: 700, color: "#C9A84C", lineHeight: 1 }}>17</p>
+              <p style={{ fontFamily: "var(--font-montserrat)", fontSize: 9, color: "rgba(255,255,255,0.5)", letterSpacing: 1, textTransform: "uppercase", marginTop: 2 }}>Pays OAPI</p>
+            </motion.div>
           </div>
         </motion.div>
       </div>
