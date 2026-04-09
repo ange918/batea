@@ -55,10 +55,6 @@ export default function Problem() {
         >
           <span className="section-watermark" style={{ WebkitTextStroke: "1px rgba(255,68,68,0.06)" }}>PROBLÈME</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill" style={{ backgroundColor: "rgba(255,68,68,0.07)", borderColor: "rgba(255,68,68,0.2)", color: "#FF4444" }}>
-              <span className="eyebrow-pill-dot" style={{ backgroundColor: "#FF4444", boxShadow: "0 0 6px rgba(255,68,68,0.8)" }} />
-              LE PROBLÈME
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",

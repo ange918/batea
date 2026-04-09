@@ -54,10 +54,6 @@ export default function Team() {
         >
           <span className="section-watermark">ÉQUIPE</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill">
-              <span className="eyebrow-pill-dot" />
-              L&apos;ÉQUIPE FONDATRICE
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",

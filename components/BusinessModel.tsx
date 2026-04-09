@@ -65,10 +65,6 @@ export default function BusinessModel() {
         >
           <span className="section-watermark">MODÈLE</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill" style={{ backgroundColor: "rgba(0,229,255,0.07)", borderColor: "rgba(0,229,255,0.2)", color: "#00E5FF" }}>
-              <span className="eyebrow-pill-dot" style={{ backgroundColor: "#00E5FF", boxShadow: "0 0 6px rgba(0,229,255,0.8)" }} />
-              MODÈLE ÉCONOMIQUE
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",

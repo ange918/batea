@@ -76,10 +76,6 @@ export default function ExecutiveSummary() {
         >
           <span className="section-watermark">RÉSUMÉ</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill">
-              <span className="eyebrow-pill-dot" />
-              RÉSUMÉ EXÉCUTIF
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",

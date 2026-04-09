@@ -52,10 +52,6 @@ export default function Solution() {
         >
           <span className="section-watermark">SOLUTION</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill">
-              <span className="eyebrow-pill-dot" />
-              LA SOLUTION
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",

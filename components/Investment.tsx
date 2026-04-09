@@ -60,10 +60,6 @@ export default function Investment() {
         >
           <span className="section-watermark">INVEST</span>
           <div style={{ position: "relative", zIndex: 1 }}>
-            <div className="eyebrow-pill" style={{ backgroundColor: "rgba(201,168,76,0.07)", borderColor: "rgba(201,168,76,0.2)", color: "#C9A84C" }}>
-              <span className="eyebrow-pill-dot" style={{ backgroundColor: "#C9A84C", boxShadow: "0 0 6px rgba(201,168,76,0.8)" }} />
-              APPEL À PARTENARIAT &amp; INVESTISSEMENT
-            </div>
             <h2
               style={{
                 fontFamily: "var(--font-unbounded)",
