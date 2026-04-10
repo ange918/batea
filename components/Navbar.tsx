@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import {
-  SparklesIcon,
   Bars3Icon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
@@ -72,17 +72,14 @@ export default function Navbar() {
               flexShrink: 0,
             }}
           >
-            <SparklesIcon style={{ width: 24, height: 24, color: "#ADFF2F" }} />
-            <span
-              style={{
-                fontFamily: "var(--font-unbounded)",
-                fontSize: 16,
-                color: "#ADFF2F",
-                letterSpacing: 1,
-              }}
-            >
-              NIGHTGLOW
-            </span>
+            <Image
+              src="/logo.jpg"
+              alt="NightGlow"
+              width={48}
+              height={48}
+              style={{ objectFit: "contain" }}
+              priority
+            />
           </a>
 
           {/* Desktop links — hidden on mobile via CSS */}
