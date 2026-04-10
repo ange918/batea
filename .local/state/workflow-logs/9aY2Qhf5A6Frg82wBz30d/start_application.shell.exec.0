@@ -1,0 +1,48 @@
+
+> bateaux@0.1.0 dev
+> next dev -p 5000 -H 0.0.0.0
+
+[1G[0K[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   [1m[38;2;173;127;168m▲ Next.js 16.0.10[39m[22m (Turbopack)
+   - Local:         http://localhost:5000
+   - Network:       http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 681ms
+ [37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 4.0s[2m (compile: 3.8s, render: 245ms)[22m
+ [33m[1m⚠[22m[39m Blocked cross-origin request from d5937ee6-81c5-47fc-81c1-e5fd27e19a75-00-1ay8it9ezhqjq.picard.replit.dev to /_next/* resource. To allow this, configure "allowedDevOrigins" in next.config
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / [32m200[39m in 95ms[2m (compile: 6ms, render: 89ms)[22m
+ GET / [32m200[39m in 78ms[2m (compile: 5ms, render: 74ms)[22m
+ GET / [32m200[39m in 68ms[2m (compile: 4ms, render: 64ms)[22m
+ GET / [32m200[39m in 77ms[2m (compile: 4ms, render: 73ms)[22m
+ GET / [32m200[39m in 69ms[2m (compile: 4ms, render: 65ms)[22m
+ GET / [32m200[39m in 76ms[2m (compile: 4ms, render: 72ms)[22m
+ GET / [32m200[39m in 70ms[2m (compile: 3ms, render: 67ms)[22m
+ GET / [32m200[39m in 73ms[2m (compile: 4ms, render: 69ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 3ms, render: 68ms)[22m
+ GET / [32m200[39m in 98ms[2m (compile: 6ms, render: 92ms)[22m
+ GET / [32m200[39m in 69ms[2m (compile: 4ms, render: 65ms)[22m
+ GET / [32m200[39m in 70ms[2m (compile: 3ms, render: 67ms)[22m
+ GET / [32m200[39m in 79ms[2m (compile: 3ms, render: 76ms)[22m
+ GET / [32m200[39m in 67ms[2m (compile: 4ms, render: 63ms)[22m
+ GET / [32m200[39m in 66ms[2m (compile: 3ms, render: 63ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 4ms, render: 67ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 3ms, render: 68ms)[22m
+ GET / [32m200[39m in 74ms[2m (compile: 4ms, render: 70ms)[22m
+ GET / [32m200[39m in 68ms[2m (compile: 3ms, render: 65ms)[22m
+ GET / [32m200[39m in 73ms[2m (compile: 4ms, render: 68ms)[22m
+ GET / [32m200[39m in 74ms[2m (compile: 4ms, render: 70ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 4ms, render: 67ms)[22m
+ GET / [32m200[39m in 76ms[2m (compile: 4ms, render: 72ms)[22m
+ GET / [32m200[39m in 68ms[2m (compile: 3ms, render: 64ms)[22m
+ GET / [32m200[39m in 70ms[2m (compile: 4ms, render: 66ms)[22m
+ GET / [32m200[39m in 65ms[2m (compile: 3ms, render: 62ms)[22m
+ GET / [32m200[39m in 121ms[2m (compile: 6ms, render: 115ms)[22m
+ GET / [32m200[39m in 67ms[2m (compile: 2ms, render: 64ms)[22m
+ GET / [32m200[39m in 84ms[2m (compile: 4ms, render: 80ms)[22m
+ GET / [32m200[39m in 66ms[2m (compile: 3ms, render: 63ms)[22m
+ GET / [32m200[39m in 72ms[2m (compile: 5ms, render: 67ms)[22m
+ GET / [32m200[39m in 71ms[2m (compile: 4ms, render: 68ms)[22m
+ GET / [32m200[39m in 67ms[2m (compile: 4ms, render: 64ms)[22m

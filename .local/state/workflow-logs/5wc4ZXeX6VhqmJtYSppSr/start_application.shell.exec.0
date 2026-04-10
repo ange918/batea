@@ -1,0 +1,21 @@
+
+> bateaux@0.1.0 dev
+> next dev -p 5000 -H 0.0.0.0
+
+[1G[0K[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   [1m[38;2;173;127;168m▲ Next.js 16.0.10[39m[22m (Turbopack)
+   - Local:         http://localhost:5000
+   - Network:       http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 685ms
+ [37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 4.0s[2m (compile: 3.7s, render: 260ms)[22m
+ [33m[1m⚠[22m[39m Blocked cross-origin request from d5937ee6-81c5-47fc-81c1-e5fd27e19a75-00-1ay8it9ezhqjq.picard.replit.dev to /_next/* resource. To allow this, configure "allowedDevOrigins" in next.config
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+ GET / [32m200[39m in 83ms[2m (compile: 5ms, render: 78ms)[22m
+ GET / [32m200[39m in 86ms[2m (compile: 3ms, render: 82ms)[22m
+ GET / [32m200[39m in 98ms[2m (compile: 6ms, render: 93ms)[22m
+ GET / [32m200[39m in 103ms[2m (compile: 5ms, render: 98ms)[22m
+ GET / [32m200[39m in 335ms[2m (compile: 117ms, render: 218ms)[22m
+ GET / [32m200[39m in 254ms[2m (compile: 86ms, render: 168ms)[22m
