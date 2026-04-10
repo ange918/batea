@@ -1,0 +1,20 @@
+[1G[0K⠙[1G[0K
+> bateaux@0.1.0 dev
+> next dev -p 5000 -H 0.0.0.0
+
+[1G[0K⠙[1G[0K[baseline-browser-mapping] The data in this module is over two months old.  To ensure accurate Baseline data, please update: `npm i baseline-browser-mapping@latest -D`
+   [1m[38;2;173;127;168m▲ Next.js 16.0.10[39m[22m (Turbopack)
+   - Local:         http://localhost:5000
+   - Network:       http://0.0.0.0:5000
+
+ [32m[1m✓[22m[39m Starting...
+ [32m[1m✓[22m[39m Ready in 3.6s
+ [37m[1m○[22m[39m Compiling / ...
+ GET / [32m200[39m in 5.4s[2m (compile: 5.1s, render: 236ms)[22m
+ GET / [32m200[39m in 82ms[2m (compile: 6ms, render: 77ms)[22m
+ [32m[1m✓[22m[39m Compiled in 106ms
+ GET / [32m200[39m in 626ms[2m (compile: 343ms, render: 283ms)[22m
+ GET / [32m200[39m in 33ms[2m (compile: 9ms, render: 24ms)[22m
+ GET / [32m200[39m in 99ms[2m (compile: 4ms, render: 95ms)[22m
+ [32m[1m✓[22m[39m Compiled in 252ms
+ [32m[1m✓[22m[39m Compiled in 286ms
