@@ -51,10 +51,7 @@ export default function Solution() {
           style={{
             marginBottom: 60,
             position: "relative",
-            minHeight: 130,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
+            paddingTop: "clamp(56px, 10vw, 140px)",
           }}
         >
           <span className="section-watermark">SOLUTION</span>

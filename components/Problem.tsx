@@ -54,10 +54,7 @@ export default function Problem() {
           style={{
             marginBottom: 64,
             position: "relative",
-            minHeight: 130,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
+            paddingTop: "clamp(56px, 10vw, 140px)",
           }}
         >
           <span className="section-watermark" style={{ WebkitTextStroke: "2px rgba(255,68,68,0.75)", textShadow: "0 0 40px rgba(255,68,68,0.35), 0 0 80px rgba(255,68,68,0.15)" }}>PROBLÈME</span>

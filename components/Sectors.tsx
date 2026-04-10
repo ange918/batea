@@ -41,10 +41,7 @@ export default function Sectors() {
           style={{
             marginBottom: 64,
             position: "relative",
-            minHeight: 130,
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-end",
+            paddingTop: "clamp(56px, 10vw, 140px)",
           }}
         >
           <span className="section-watermark">SECTEURS</span>
