@@ -85,7 +85,7 @@ export default function BusinessModel() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gridTemplateColumns: "repeat(2, 1fr)",
             gap: 20,
             marginBottom: 28,
           }}
@@ -116,9 +116,12 @@ export default function BusinessModel() {
                   right: 18,
                   fontFamily: "var(--font-unbounded)",
                   fontSize: 80,
-                  color: `${card.color}08`,
+                  color: "transparent",
+                  WebkitTextStroke: `1.5px ${card.color}`,
+                  textShadow: `0 0 20px ${card.color}60`,
                   lineHeight: 1,
                   userSelect: "none",
+                  opacity: 0.6,
                 }}
               >
                 {card.num}

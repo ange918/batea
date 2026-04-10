@@ -97,9 +97,12 @@ export default function Sectors() {
                   right: 14,
                   fontFamily: "var(--font-unbounded)",
                   fontSize: 56,
-                  color: `${sector.color}08`,
+                  color: "transparent",
+                  WebkitTextStroke: `1.5px ${sector.color}`,
+                  textShadow: `0 0 16px ${sector.color}60`,
                   lineHeight: 1,
                   userSelect: "none",
+                  opacity: 0.5,
                 }}
               >
                 {sector.num}

@@ -132,9 +132,12 @@ export default function ExecutiveSummary() {
                   right: 20,
                   fontFamily: "var(--font-unbounded)",
                   fontSize: 18,
-                  color: `${card.color}10`,
+                  color: "transparent",
+                  WebkitTextStroke: `1px ${card.color}`,
+                  textShadow: `0 0 10px ${card.color}80`,
                   lineHeight: 1,
                   userSelect: "none",
+                  opacity: 0.7,
                 }}
               >
                 {card.num}
