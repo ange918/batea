@@ -325,7 +325,7 @@ export default function Collection() {
         </div>
 
         {/* Product grid */}
-        <div className="grid-cards" style={{ marginBottom: 56 }}>
+        <div className="collection-grid" style={{ marginBottom: 56 }}>
           {products.map((product, i) => {
             const GarmentSVG = GarmentComponents[product.garment];
             return (
@@ -437,6 +437,7 @@ export default function Collection() {
                     {product.name}
                   </h3>
                   <div
+                    className="collection-price-row"
                     style={{
                       display: "flex",
                       alignItems: "center",
@@ -444,6 +445,7 @@ export default function Collection() {
                     }}
                   >
                     <span
+                      className="collection-price"
                       style={{
                         fontFamily: "var(--font-unbounded)",
                         fontSize: 16,

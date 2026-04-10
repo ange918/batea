@@ -204,6 +204,14 @@ body {
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+
+/* Collection always 2×2 on desktop, 1 col on mobile */
+.collection-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
 .grid-market-metrics {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr));
@@ -300,11 +308,21 @@ body {
   }
 
   /* Force single column on mobile for all card grids */
-  .grid-cards       { grid-template-columns: 1fr; }
-  .grid-cards-sm    { grid-template-columns: 1fr; }
-  .grid-cards-2col  { grid-template-columns: 1fr; }
+  .grid-cards          { grid-template-columns: 1fr; }
+  .grid-cards-sm       { grid-template-columns: 1fr; }
+  .grid-cards-2col     { grid-template-columns: 1fr; }
+  .collection-grid     { grid-template-columns: 1fr; }
   .grid-market-metrics { grid-template-columns: 1fr; }
   .grid-market-detail  { grid-template-columns: 1fr; }
+
+  /* Collection price row — wrap on very narrow screens */
+  .collection-price-row {
+    flex-wrap: wrap;
+    gap: 8px !important;
+  }
+  .collection-price {
+    font-size: 13px !important;
+  }
 
   /* Problem & Collection cards — reduce padding/font on mobile */
   .problem-card {
