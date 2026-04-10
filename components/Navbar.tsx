@@ -77,7 +77,7 @@ export default function Navbar() {
               alt="NightGlow"
               width={48}
               height={48}
-              style={{ objectFit: "contain" }}
+              style={{ objectFit: "contain", width: 48, height: "auto" }}
               priority
             />
           </a>

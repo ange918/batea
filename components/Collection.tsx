@@ -246,6 +246,7 @@ export default function Collection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 24,
             position: "relative",
@@ -324,14 +325,7 @@ export default function Collection() {
         </div>
 
         {/* Product grid */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: 20,
-            marginBottom: 56,
-          }}
-        >
+        <div className="grid-cards" style={{ marginBottom: 56 }}>
           {products.map((product, i) => {
             const GarmentSVG = GarmentComponents[product.garment];
             return (

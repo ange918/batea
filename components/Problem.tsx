@@ -51,6 +51,7 @@ export default function Problem() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",
@@ -72,13 +73,7 @@ export default function Problem() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: 20,
-          }}
-        >
+        <div className="grid-cards">
           {cards.map((card, i) => (
             <motion.div
               key={card.title}

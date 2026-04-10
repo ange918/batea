@@ -38,6 +38,7 @@ export default function Sectors() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",
@@ -59,13 +60,7 @@ export default function Sectors() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fill, minmax(230px, 1fr))",
-            gap: 16,
-          }}
-        >
+        <div className="grid-cards-sm">
           {sectors.map((sector, i) => (
             <motion.div
               key={sector.num}

@@ -250,6 +250,8 @@ export default function Hero() {
               height={260}
               style={{
                 objectFit: "contain",
+                width: 260,
+                height: "auto",
                 filter: "drop-shadow(0 0 24px rgba(173,255,47,0.5))",
               }}
               priority

@@ -50,6 +50,7 @@ export default function Team() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",
@@ -71,13 +72,7 @@ export default function Team() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
-            gap: 20,
-          }}
-        >
+        <div className="grid-cards-sm">
           {members.map((m, i) => (
             <motion.div
               key={m.name}

@@ -56,6 +56,7 @@ export default function Investment() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",

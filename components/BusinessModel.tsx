@@ -61,6 +61,7 @@ export default function BusinessModel() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",
@@ -82,14 +83,7 @@ export default function BusinessModel() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gap: 20,
-            marginBottom: 28,
-          }}
-        >
+        <div className="grid-cards-2col" style={{ marginBottom: 28 }}>
           {cards.map((card, i) => (
             <motion.div
               key={card.num}

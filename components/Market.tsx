@@ -110,6 +110,7 @@ export default function Market() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 60,
             position: "relative",
@@ -131,14 +132,7 @@ export default function Market() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: 20,
-            marginBottom: 48,
-          }}
-        >
+        <div className="grid-market-metrics">
           {metrics.map((m, i) => (
             <motion.div
               key={m.label}
@@ -192,13 +186,7 @@ export default function Market() {
           ))}
         </div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-            gap: 24,
-          }}
-        >
+        <div className="grid-market-detail">
           <motion.div
             initial="hidden"
             whileInView="visible"

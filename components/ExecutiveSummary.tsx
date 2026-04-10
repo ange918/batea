@@ -72,6 +72,7 @@ export default function ExecutiveSummary() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
+          className="section-header"
           style={{
             marginBottom: 64,
             position: "relative",
@@ -93,13 +94,7 @@ export default function ExecutiveSummary() {
           </div>
         </motion.div>
 
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))",
-            gap: 20,
-          }}
-        >
+        <div className="grid-cards">
           {cards.map((card, i) => (
             <motion.div
               key={card.label}
