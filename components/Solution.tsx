@@ -48,7 +48,14 @@ export default function Solution() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 60, position: "relative" }}
+          style={{
+            marginBottom: 60,
+            position: "relative",
+            minHeight: 130,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+          }}
         >
           <span className="section-watermark">SOLUTION</span>
           <div style={{ position: "relative", zIndex: 1 }}>

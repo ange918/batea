@@ -38,7 +38,14 @@ export default function Sectors() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64, position: "relative" }}
+          style={{
+            marginBottom: 64,
+            position: "relative",
+            minHeight: 130,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+          }}
         >
           <span className="section-watermark">SECTEURS</span>
           <div style={{ position: "relative", zIndex: 1 }}>

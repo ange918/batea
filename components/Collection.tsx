@@ -246,7 +246,14 @@ export default function Collection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 24, position: "relative", paddingTop: 20 }}
+          style={{
+            marginBottom: 24,
+            position: "relative",
+            minHeight: 130,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+          }}
         >
           <span className="section-watermark">COLLECTION</span>
           <div style={{ position: "relative", zIndex: 1 }}>
