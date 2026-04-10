@@ -196,6 +196,7 @@ export default function Navbar() {
                   initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 + i * 0.06, duration: 0.25 }}
+                  className="mobile-drawer-link"
                   style={{
                     display: "flex",
                     alignItems: "center",

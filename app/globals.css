@@ -303,8 +303,49 @@ body {
   .grid-cards       { grid-template-columns: 1fr; }
   .grid-cards-sm    { grid-template-columns: 1fr; }
   .grid-cards-2col  { grid-template-columns: 1fr; }
-  .grid-market-metrics { grid-template-columns: repeat(2, 1fr); }
+  .grid-market-metrics { grid-template-columns: 1fr; }
   .grid-market-detail  { grid-template-columns: 1fr; }
+
+  /* Problem & Collection cards — reduce padding/font on mobile */
+  .problem-card {
+    padding: 20px 16px !important;
+  }
+  .problem-card h3 {
+    font-size: 14px !important;
+    margin-bottom: 8px !important;
+  }
+  .problem-card p {
+    font-size: 12px !important;
+    line-height: 1.55 !important;
+    margin-bottom: 16px !important;
+  }
+  .problem-card .stat-box {
+    padding: 10px 12px !important;
+  }
+  .problem-card .stat-box .stat-value {
+    font-size: 15px !important;
+  }
+
+  .collection-card-illustration {
+    height: 180px !important;
+    padding: 16px 20px !important;
+  }
+  .collection-card-info {
+    padding: 14px 16px !important;
+  }
+  .collection-card h3 {
+    font-size: 12px !important;
+    margin-bottom: 8px !important;
+  }
+  .collection-card p {
+    font-size: 10px !important;
+  }
+
+  /* Burger drawer links — reduce font size */
+  .mobile-drawer-link {
+    font-size: clamp(20px, 6vw, 28px) !important;
+    padding: 10px 20px !important;
+  }
 
   /* Investment cards — stack title + badge vertically on mobile */
   .invest-card-header {

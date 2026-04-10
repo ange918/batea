@@ -83,6 +83,7 @@ export default function Problem() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
               variants={fadeUp}
               whileHover={{ y: -6, boxShadow: `0 20px 50px ${card.color}22` }}
+              className="problem-card"
               style={{
                 background: "linear-gradient(160deg, #181818 0%, #141414 100%)",
                 borderRadius: 16,
@@ -146,6 +147,7 @@ export default function Problem() {
 
               {/* Stat box */}
               <div
+                className="stat-box"
                 style={{
                   background: `${card.color}10`,
                   borderRadius: 10,
@@ -154,6 +156,7 @@ export default function Problem() {
                 }}
               >
                 <p
+                  className="stat-value"
                   style={{
                     fontFamily: "var(--font-unbounded)",
                     fontSize: 20,

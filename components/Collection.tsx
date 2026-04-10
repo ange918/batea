@@ -331,6 +331,7 @@ export default function Collection() {
             return (
               <motion.div
                 key={product.id}
+                className="collection-card"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.2 }}
@@ -373,6 +374,7 @@ export default function Collection() {
 
                 {/* Garment illustration area */}
                 <div
+                  className="collection-card-illustration"
                   style={{
                     height: 280,
                     display: "flex",
@@ -400,6 +402,7 @@ export default function Collection() {
 
                 {/* Product info */}
                 <div
+                  className="collection-card-info"
                   style={{
                     padding: "20px 22px",
                     borderTop: night
