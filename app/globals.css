@@ -183,9 +183,9 @@ body {
   box-shadow: 0 8px 30px rgba(173,255,47,0.3);
 }
 
-/* ── Section watermark container — clip overflow ── */
+/* ── Section watermark container — let html/body handle horizontal clip ── */
 .section-header {
-  overflow: hidden;
+  overflow: visible;
 }
 
 /* ── Responsive card grids ── */
@@ -305,6 +305,20 @@ body {
   .grid-cards-2col  { grid-template-columns: 1fr; }
   .grid-market-metrics { grid-template-columns: repeat(2, 1fr); }
   .grid-market-detail  { grid-template-columns: 1fr; }
+
+  /* Investment cards — stack title + badge vertically on mobile */
+  .invest-card-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+  .invest-card-title {
+    font-size: clamp(12px, 3.8vw, 20px) !important;
+  }
+  .invest-card-badge {
+    white-space: normal !important;
+    font-size: 11px !important;
+    padding: 4px 10px !important;
+  }
 }
 
 /* ════════════════════════════════

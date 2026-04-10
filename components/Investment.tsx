@@ -141,16 +141,17 @@ export default function Investment() {
 
               <div style={{ flex: 1, paddingRight: 4 }}>
                 <div
+                  className="invest-card-header"
                   style={{
                     display: "flex",
                     justifyContent: "space-between",
                     alignItems: "flex-start",
-                    flexWrap: "wrap",
                     gap: 8,
                     marginBottom: 10,
                   }}
                 >
                   <h3
+                    className="invest-card-title"
                     style={{
                       fontFamily: "var(--font-unbounded)",
                       fontSize: 20,
@@ -162,6 +163,7 @@ export default function Investment() {
                     {block.title}
                   </h3>
                   <span
+                    className="invest-card-badge"
                     style={{
                       display: "inline-block",
                       backgroundColor: `${block.color}12`,
@@ -172,7 +174,6 @@ export default function Investment() {
                       fontSize: 15,
                       color: block.color,
                       letterSpacing: 1,
-                      whiteSpace: "nowrap",
                     }}
                   >
                     {block.amount}
