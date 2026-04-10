@@ -73,7 +73,7 @@ export default function Navbar() {
             }}
           >
             <Image
-              src="/logo.jpg"
+              src="/logo.png"
               alt="NightGlow"
               width={48}
               height={48}
