@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { ArrowRightIcon } from "@heroicons/react/24/outline";
+import Image from "next/image";
 
 type Particle = { id: number; left: string; size: number; duration: number; delay: number };
 
@@ -240,36 +241,19 @@ export default function Hero() {
             }}
           />
 
-          {/* SVG phosphorescent figure + decorative dots */}
+          {/* Logo + decorative badges */}
           <div style={{ position: "relative", zIndex: 1 }}>
-            <svg
+            <Image
+              src="/logo.png"
+              alt="NightGlow"
               width={260}
-              height={300}
-              viewBox="0 0 260 300"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-              style={{ filter: "drop-shadow(0 0 24px rgba(173,255,47,0.5))" }}
-            >
-              {/* Person silhouette — phosphorescent */}
-              <circle cx="130" cy="55" r="28" stroke="#ADFF2F" strokeWidth="2" />
-              <path d="M100 83 C80 120 70 155 80 200 H180 C190 155 180 120 160 83 Z" stroke="#ADFF2F" strokeWidth="2" fill="rgba(173,255,47,0.04)" />
-              <path d="M80 200 L55 260 H105 L130 230 L155 260 H205 L180 200 Z" stroke="#ADFF2F" strokeWidth="2" fill="rgba(173,255,47,0.04)" />
-              {/* Arms out */}
-              <path d="M100 120 L40 100 M160 120 L220 100" stroke="#ADFF2F" strokeWidth="2" />
-              {/* Glow dots on arms */}
-              <circle cx="40" cy="100" r="5" fill="#ADFF2F" opacity="0.9" />
-              <circle cx="220" cy="100" r="5" fill="#ADFF2F" opacity="0.9" />
-              {/* Shirt motif lines */}
-              <path d="M110 130 Q130 145 150 130" stroke="#ADFF2F" strokeWidth="1.5" fill="none" opacity="0.6" />
-              <path d="M115 145 Q130 158 145 145" stroke="#ADFF2F" strokeWidth="1" fill="none" opacity="0.4" />
-              {/* Ambient glow dots */}
-              <circle cx="20" cy="60" r="3" fill="#ADFF2F" opacity="0.5" />
-              <circle cx="240" cy="80" r="4" fill="#ADFF2F" opacity="0.4" />
-              <circle cx="15" cy="180" r="2" fill="#ADFF2F" opacity="0.6" />
-              <circle cx="245" cy="200" r="3" fill="#ADFF2F" opacity="0.35" />
-              <circle cx="50" cy="250" r="2" fill="#ADFF2F" opacity="0.3" />
-              <circle cx="210" cy="260" r="2.5" fill="#ADFF2F" opacity="0.4" />
-            </svg>
+              height={260}
+              style={{
+                objectFit: "contain",
+                filter: "drop-shadow(0 0 24px rgba(173,255,47,0.5))",
+              }}
+              priority
+            />
 
             {/* Floating stats badge — like Meetup cards */}
             <motion.div
