@@ -51,9 +51,16 @@ export default function Problem() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
           variants={fadeUp}
-          style={{ marginBottom: 64, position: "relative" }}
+          style={{
+            marginBottom: 64,
+            position: "relative",
+            minHeight: 130,
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "flex-end",
+          }}
         >
-          <span className="section-watermark" style={{ WebkitTextStroke: "1px rgba(255,68,68,0.06)" }}>PROBLÈME</span>
+          <span className="section-watermark" style={{ WebkitTextStroke: "2px rgba(255,68,68,0.75)", textShadow: "0 0 40px rgba(255,68,68,0.35), 0 0 80px rgba(255,68,68,0.15)" }}>PROBLÈME</span>
           <div style={{ position: "relative", zIndex: 1 }}>
             <h2
               style={{
